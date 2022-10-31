@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 185f6993d5150494d98da50e26cb1c25, type: 3}
+  m_Name: AssetBundleCollectorSetting
+  m_EditorClassIdentifier: 
+  EnableAddressable: 0
+  AutoCollectShaders: 1
+  ShadersBundleName: myshaders
+  Groups:
+  - GroupName: Prefab
+    GroupDesc: "\u9884\u8BBE\u4F53"
+    AssetTags: 
+    ActiveRuleName: EnableGroup
+    Collectors:
+    - CollectPath: Assets/Res/Prefab
+      CollectorType: 0
+      AddressRuleName: AddressByFileName
+      PackRuleName: PackDirectory
+      FilterRuleName: CollectPrefab
+      AssetTags: 
+  - GroupName: Scenes
+    GroupDesc: "\u573A\u666F"
+    AssetTags: 
+    ActiveRuleName: EnableGroup
+    Collectors:
+    - CollectPath: Assets/Res/Scene
+      CollectorType: 0
+      AddressRuleName: AddressByFileName
+      PackRuleName: PackDirectory
+      FilterRuleName: CollectScene
+      AssetTags: 
