@@ -112,9 +112,11 @@ Shader "Circle01"
 				float2 appendResult19 = (float2(_Offset2Scale2.x , _Offset2Scale2.y));
 				float2 appendResult20 = (float2(_Offset2Scale2.z , _Offset2Scale2.w));
 				float smoothstepResult13 = smoothstep( _Vector1.x , _Vector1.y , ( 1.0 - ( length( ( ( texCoord1 - appendResult19 ) / appendResult20 ) ) * 2.0 ) ));
+				float4 temp_output_8_0 = ( _CirlceColor * smoothstepResult13 );
+				clip( temp_output_8_0 - float4( 0.5,0,0,0 ));
 				
 				
-				finalColor = ( _CirlceColor * smoothstepResult13 );
+				finalColor = temp_output_8_0;
 				return finalColor;
 			}
 			ENDCG
@@ -126,7 +128,7 @@ Shader "Circle01"
 }
 /*ASEBEGIN
 Version=19002
-26;45;1440;779;337.0511;277.2606;1.144686;True;True
+0;45;1440;779;329.9133;274.1547;1.134685;True;False
 Node;AmplifyShaderEditor.Vector4Node;18;-699.6344,444.5028;Inherit;False;Property;_Offset2Scale2;Offset2Scale2;1;0;Create;True;0;0;0;False;0;False;0.5,0.5,1,1;0.5,0.5,1,1;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.TextureCoordinatesNode;1;-559,18;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.DynamicAppendNode;19;-501.0645,379.8258;Inherit;False;FLOAT2;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT2;0
@@ -140,7 +142,8 @@ Node;AmplifyShaderEditor.Vector2Node;14;334.8089,490.4957;Inherit;False;Constant
 Node;AmplifyShaderEditor.ColorNode;9;-209.9945,-159.4695;Inherit;False;Property;_CirlceColor;CirlceColor;0;0;Create;True;0;0;0;False;0;False;1,0,0,0;1,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SmoothstepOpNode;13;382.509,278.495;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;1;False;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;8;371.2756,-66.4762;Inherit;True;2;2;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;1;COLOR;0
-Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;0;632.1916,-21.01006;Float;False;True;-1;2;ASEMaterialInspector;100;3;Circle01;0770190933193b94aaa3065e307002fa;True;Unlit;0;0;Unlit;2;False;True;0;1;False;;0;False;;0;1;False;;0;False;;True;0;False;;0;False;;False;False;False;False;False;False;False;False;False;True;0;False;;False;True;0;False;;False;True;True;True;True;True;0;False;;False;False;False;False;False;False;False;True;False;255;False;;255;False;;255;False;;7;False;;1;False;;1;False;;1;False;;7;False;;1;False;;1;False;;1;False;;False;True;1;False;;True;3;False;;True;True;0;False;;0;False;;True;1;RenderType=Opaque=RenderType;True;2;False;0;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;1;LightMode=ForwardBase;False;False;0;;0;0;Standard;1;Vertex Position,InvertActionOnDeselection;1;0;0;1;True;False;;False;0
+Node;AmplifyShaderEditor.ClipNode;22;699.2463,115.0424;Inherit;True;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;COLOR;0.5,0,0,0;False;1;COLOR;0
+Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;0;827.9329,-19.86538;Float;False;True;-1;2;ASEMaterialInspector;100;3;Circle01;0770190933193b94aaa3065e307002fa;True;Unlit;0;0;Unlit;2;False;True;0;1;False;;0;False;;0;1;False;;0;False;;True;0;False;;0;False;;False;False;False;False;False;False;False;False;False;True;0;False;;False;True;0;False;;False;True;True;True;True;True;0;False;;False;False;False;False;False;False;False;True;False;255;False;;255;False;;255;False;;7;False;;1;False;;1;False;;1;False;;7;False;;1;False;;1;False;;1;False;;False;True;1;False;;True;3;False;;True;True;0;False;;0;False;;True;1;RenderType=Opaque=RenderType;True;2;False;0;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;1;LightMode=ForwardBase;False;False;0;;0;0;Standard;1;Vertex Position,InvertActionOnDeselection;1;0;0;1;True;False;;False;0
 WireConnection;19;0;18;1
 WireConnection;19;1;18;2
 WireConnection;20;0;18;3
@@ -157,6 +160,8 @@ WireConnection;13;1;14;1
 WireConnection;13;2;14;2
 WireConnection;8;0;9;0
 WireConnection;8;1;13;0
-WireConnection;0;0;8;0
+WireConnection;22;0;8;0
+WireConnection;22;1;8;0
+WireConnection;0;0;22;0
 ASEEND*/
-//CHKSM=C2F63FDF2FEB8E66B66E40D17FBF34576137EDEE
+//CHKSM=572C2A49782136061EE6ADB5157B33902BF303FB

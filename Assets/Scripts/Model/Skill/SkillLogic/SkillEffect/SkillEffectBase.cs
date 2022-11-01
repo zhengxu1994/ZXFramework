@@ -5,12 +5,14 @@ using Notifaction;
 
 namespace Skill
 {
-    public static class SkillEffectName
+    public enum SkillEffectType
     {
-        public const string DamageEffect = "DamageEffect";
-
-        public const string SlowDownEffect = "SlowDownEffect";
+        None,
+        DamageEffect,
+        SlowDownEffect
     }
+
+
     public class SkillEffectBase  
     {
         public int effectId;

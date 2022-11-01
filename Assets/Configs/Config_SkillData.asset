@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c26c7d535f804f74a732a8b68e8ec3a, type: 3}
+  m_Name: Config_SkillData
+  m_EditorClassIdentifier: 
+  Name: "\u9677\u9635"
+  ID: 0
+  BaseClass: SkillBase
+  Skill_UseCondition: 0100000002000000
+  SkillBehavior: 00000000
+  Skill_ChooseTargetType: 4
+  Skill_ChooseTargetArea: 1
+  Skill_ChooseTargetTreams: 03000000
+  Skill_ChooseTargetExcludesTypes: 00000000
+  Skill_ChooseTargetExcludesFlags: 01000000
+  maxLevel: 5
+  SkillRange: 100
+  SkillCoolDown: 10
+  SkillCostValue: 100
+  IsPassive: 0
+  IsHidden: 1
+  Stand_Modifiers:
+    Name: Damage
+    effectData:
+      Name: "\u8D77\u624B\u7279\u6548"
+      EffectName: Effect/Stand
+      Target: 4
+    eventDatas:
+    - ChooseData:
+        TargetType: 0
+        TargetArea: 0
+        TargetTream: 3
+        TargetExcludeTypes: 0
+        TargetExcludeFlags: 1
+      EffectData:
+        Name: 
+        EffectName: 
+        Target: 0
+      effect:
+        Name: 1
+    buffDatas:
+    - BuffId: 0
+      TotalTick: 60
+      IntervalTick: 30
+      destroyWithSkill: 0
+      ChooseData:
+        TargetType: 0
+        TargetArea: 0
+        TargetTream: 3
+        TargetExcludeTypes: 0
+        TargetExcludeFlags: 1
+      EffectData:
+        Name: "\u51CF\u901Fbuff"
+        EffectName: Effect/SlowDown
+        Target: 2
+      onceEffects:
+      - Name: 2
+      effects: []
+  Sing_Modifiers:
+    Name: 
+    effectData:
+      Name: 
+      EffectName: 
+      Target: 0
+    eventDatas: []
+    buffDatas: []
+  End_Modifiers:
+    Name: 
+    effectData:
+      Name: 
+      EffectName: 
+      Target: 0
+    eventDatas: []
+    buffDatas: []

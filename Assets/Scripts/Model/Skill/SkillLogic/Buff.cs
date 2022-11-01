@@ -78,6 +78,7 @@ namespace Skill
             if (onceEffects != null)
             {
                 addedSoldiers = new HashSet<SoldierEntity>();
+                removeSoldiers = new HashSet<SoldierEntity>();
                 onceEffectLogics = new SkillEffectBase[onceEffects.Length];
                 for (int i = 0; i < onceEffects.Length; i++)
                 {

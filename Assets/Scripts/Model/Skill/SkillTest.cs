@@ -5,6 +5,7 @@ using Skill;
 using Bepop.Core;
 using Notifaction;
 using Skill.SkillTrigger;
+using UnityEditor;
 
 public class SkillTest : MonoBehaviour
 {
@@ -41,8 +42,9 @@ public class SkillTest : MonoBehaviour
         enemyEntity.sex = true;
         enemyEntity.skillCD = 10;
 
-        SkillData skillData = new SkillData();
-        skillData.TestSkill();
+        //SkillData skillData = new SkillData();
+        //skillData.TestSkill();
+        var skillData = AssetDatabase.LoadAssetAtPath<SkillData>("Assets/Configs/Config_SkillData.asset");
 
         var skill = playerEntity.AddSkill(skillData);
         var canUse = skill.CheckCanUse();

@@ -128,9 +128,8 @@ namespace Skill
 
 
             //范围内目标
-            var type1 = skillData.Skill_ChooseTargetTypeAndArea;
-            var cond1 = GetCondBySkill_ChooseTargetType(type1.Item1);
-            var cond2 = GetCondBySkill_ChooseTargetArea(type1.Item2);
+            var cond1 = GetCondBySkill_ChooseTargetType(skillData.Skill_ChooseTargetType);
+            var cond2 = GetCondBySkill_ChooseTargetArea(skillData.Skill_ChooseTargetArea);
             if (cond1 != null)
                 conditions.Add(cond1);
             if (cond2 != null)
