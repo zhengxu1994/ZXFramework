@@ -126,7 +126,7 @@ Shader "Circle01"
 }
 /*ASEBEGIN
 Version=19002
-0;45;1440;780;950.4;106.954;1.134685;True;True
+26;45;1440;779;337.0511;277.2606;1.144686;True;True
 Node;AmplifyShaderEditor.Vector4Node;18;-699.6344,444.5028;Inherit;False;Property;_Offset2Scale2;Offset2Scale2;1;0;Create;True;0;0;0;False;0;False;0.5,0.5,1,1;0.5,0.5,1,1;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.TextureCoordinatesNode;1;-559,18;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.DynamicAppendNode;19;-501.0645,379.8258;Inherit;False;FLOAT2;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT2;0
@@ -135,8 +135,8 @@ Node;AmplifyShaderEditor.SimpleSubtractOpNode;6;-325.6878,117.7553;Inherit;True;
 Node;AmplifyShaderEditor.SimpleDivideOpNode;17;-207.9128,457.6356;Inherit;False;2;0;FLOAT2;0,0;False;1;FLOAT2;0,0;False;1;FLOAT2;0
 Node;AmplifyShaderEditor.LengthOpNode;2;-49.74221,98.53547;Inherit;True;1;0;FLOAT2;0,0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;11;-11.81226,425.8355;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;2;False;1;FLOAT;0
-Node;AmplifyShaderEditor.Vector2Node;14;334.8089,490.4957;Inherit;False;Constant;_Vector1;Vector 1;1;0;Create;True;0;0;0;False;0;False;0,0.5;0,0;0;3;FLOAT2;0;FLOAT;1;FLOAT;2
 Node;AmplifyShaderEditor.OneMinusNode;4;183.0294,234.7641;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0
+Node;AmplifyShaderEditor.Vector2Node;14;334.8089,490.4957;Inherit;False;Constant;_Vector1;Vector 1;1;0;Create;True;0;0;0;False;0;False;0,0.5;0,0;0;3;FLOAT2;0;FLOAT;1;FLOAT;2
 Node;AmplifyShaderEditor.ColorNode;9;-209.9945,-159.4695;Inherit;False;Property;_CirlceColor;CirlceColor;0;0;Create;True;0;0;0;False;0;False;1,0,0,0;1,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SmoothstepOpNode;13;382.509,278.495;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;1;False;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;8;371.2756,-66.4762;Inherit;True;2;2;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;1;COLOR;0
@@ -159,4 +159,4 @@ WireConnection;8;0;9;0
 WireConnection;8;1;13;0
 WireConnection;0;0;8;0
 ASEEND*/
-//CHKSM=E7632E52BEDFF9D93E33189B7391499768FF5208
+//CHKSM=C2F63FDF2FEB8E66B66E40D17FBF34576137EDEE
