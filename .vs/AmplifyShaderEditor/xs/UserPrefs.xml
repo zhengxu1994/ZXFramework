@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{752CC507-48D8-CB41-305F-18D04BE4F8B0}|">
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AmplifyShaderEditor" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Examples" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.AmplifyShaderEditor PreferredExecutionTarget="39bfae2f-5bfe-44a8-b1ff-0ffdd7e4b986" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

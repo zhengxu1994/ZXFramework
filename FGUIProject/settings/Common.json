@@ -1,0 +1,36 @@
+{
+  "font": "",
+  "fontSize": 12,
+  "textColor": "#000000",
+  "fontAdjustment": false,
+  "colorScheme": [
+    "黑色 #000000",
+    "文本白色 #FFFFFF",
+    "标题黄色 #FFEEC6",
+    "按钮标题 #EBD9A7",
+    "页签灰态 #848484",
+    "属性小标题 #959595",
+    "描述 #C6C6C6",
+    "属性 #B6B8B7"
+  ],
+  "fontSizeScheme": [
+    "文本20号 20",
+    "文本16号 16",
+    "文本30号 30",
+    "文本18号 18",
+    "文本22号 22"
+  ],
+  "fontScheme": [
+    "思源黑体 ui://Font/SourceHanSansCN-Medium",
+    "思源宋体 ui://Font/SourceHanSerifCN-Bold"
+  ],
+  "scrollBars": {
+    "horizontal": "",
+    "vertical": "",
+    "defaultDisplay": "visible"
+  },
+  "tipsRes": "",
+  "buttonClickSound": "",
+  "pivot": "default",
+  "fileName": "Common"
+}

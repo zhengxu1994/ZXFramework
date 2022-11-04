@@ -62,9 +62,9 @@ MonoBehaviour:
         Name: "\u51CF\u901Fbuff"
         EffectName: Effect/SlowDown
         Target: 2
-      onceEffects:
+      onceEffects: []
+      effects:
       - Name: 2
-      effects: []
   Sing_Modifiers:
     Name: 
     effectData:

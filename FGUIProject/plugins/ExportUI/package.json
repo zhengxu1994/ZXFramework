@@ -1,0 +1,11 @@
+{
+  "name": "ExportUI",
+  "displayName": "导出UI控件到cs文件",
+  "description": "在检查器里设置",
+  "version": "1.0",
+  "author": {
+    "name": ""
+  },
+  "icon": "",
+  "main": "main.lua"
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="kosb0j94">
+  <resources>
+    <component id="l1bn1" name="SkillEditor.xml" path="/" exported="true"/>
+  </resources>
+  <publish name="" genCode="true" codePath="/Users/zhengzhengxu/Desktop/ZXFramework/Assets/Editor/SkillEditor/UILogic"/>
+</packageDescription>

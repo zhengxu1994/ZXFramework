@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Editor/GameEncryption.cs" />
+    <Compile Include="Assets/Editor/SkillEditor/SkillEditorWindow.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/Editor/Editor.asmdef" />

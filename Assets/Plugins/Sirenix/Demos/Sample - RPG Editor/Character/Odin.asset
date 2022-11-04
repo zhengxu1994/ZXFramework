@@ -3,8 +3,9 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -264,154 +265,154 @@ MonoBehaviour:
       Data: Sirenix.OdinInspector.Demos.RPGEditor.ItemSlot, Assembly-CSharp-firstpass
     - Name: ItemCount
       Entry: 3
-      Data: 0
-    - Name: Item
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: Sirenix.OdinInspector.Demos.RPGEditor.ItemSlot, Assembly-CSharp-firstpass
-    - Name: ItemCount
-      Entry: 3
-      Data: 0
-    - Name: Item
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: Sirenix.OdinInspector.Demos.RPGEditor.ItemSlot, Assembly-CSharp-firstpass
-    - Name: ItemCount
-      Entry: 3
-      Data: 0
-    - Name: Item
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: Sirenix.OdinInspector.Demos.RPGEditor.ItemSlot, Assembly-CSharp-firstpass
-    - Name: ItemCount
-      Entry: 3
-      Data: 0
-    - Name: Item
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: Sirenix.OdinInspector.Demos.RPGEditor.ItemSlot, Assembly-CSharp-firstpass
-    - Name: ItemCount
-      Entry: 3
-      Data: 0
-    - Name: Item
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: Sirenix.OdinInspector.Demos.RPGEditor.ItemSlot, Assembly-CSharp-firstpass
-    - Name: ItemCount
-      Entry: 3
-      Data: 0
-    - Name: Item
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: Sirenix.OdinInspector.Demos.RPGEditor.ItemSlot, Assembly-CSharp-firstpass
-    - Name: ItemCount
-      Entry: 3
-      Data: 0
-    - Name: Item
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: Sirenix.OdinInspector.Demos.RPGEditor.ItemSlot, Assembly-CSharp-firstpass
-    - Name: ItemCount
-      Entry: 3
-      Data: 0
-    - Name: Item
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: Sirenix.OdinInspector.Demos.RPGEditor.ItemSlot, Assembly-CSharp-firstpass
-    - Name: ItemCount
-      Entry: 3
-      Data: 0
-    - Name: Item
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: Sirenix.OdinInspector.Demos.RPGEditor.ItemSlot, Assembly-CSharp-firstpass
-    - Name: ItemCount
-      Entry: 3
-      Data: 0
-    - Name: Item
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: Sirenix.OdinInspector.Demos.RPGEditor.ItemSlot, Assembly-CSharp-firstpass
-    - Name: ItemCount
-      Entry: 3
-      Data: 0
-    - Name: Item
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: Sirenix.OdinInspector.Demos.RPGEditor.ItemSlot, Assembly-CSharp-firstpass
-    - Name: ItemCount
-      Entry: 3
-      Data: 0
-    - Name: Item
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: Sirenix.OdinInspector.Demos.RPGEditor.ItemSlot, Assembly-CSharp-firstpass
-    - Name: ItemCount
-      Entry: 3
       Data: 1
     - Name: Item
       Entry: 10
       Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Sirenix.OdinInspector.Demos.RPGEditor.ItemSlot, Assembly-CSharp-firstpass
+    - Name: ItemCount
+      Entry: 3
+      Data: 0
+    - Name: Item
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Sirenix.OdinInspector.Demos.RPGEditor.ItemSlot, Assembly-CSharp-firstpass
+    - Name: ItemCount
+      Entry: 3
+      Data: 0
+    - Name: Item
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Sirenix.OdinInspector.Demos.RPGEditor.ItemSlot, Assembly-CSharp-firstpass
+    - Name: ItemCount
+      Entry: 3
+      Data: 0
+    - Name: Item
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Sirenix.OdinInspector.Demos.RPGEditor.ItemSlot, Assembly-CSharp-firstpass
+    - Name: ItemCount
+      Entry: 3
+      Data: 0
+    - Name: Item
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Sirenix.OdinInspector.Demos.RPGEditor.ItemSlot, Assembly-CSharp-firstpass
+    - Name: ItemCount
+      Entry: 3
+      Data: 0
+    - Name: Item
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Sirenix.OdinInspector.Demos.RPGEditor.ItemSlot, Assembly-CSharp-firstpass
+    - Name: ItemCount
+      Entry: 3
+      Data: 0
+    - Name: Item
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Sirenix.OdinInspector.Demos.RPGEditor.ItemSlot, Assembly-CSharp-firstpass
+    - Name: ItemCount
+      Entry: 3
+      Data: 0
+    - Name: Item
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Sirenix.OdinInspector.Demos.RPGEditor.ItemSlot, Assembly-CSharp-firstpass
+    - Name: ItemCount
+      Entry: 3
+      Data: 0
+    - Name: Item
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Sirenix.OdinInspector.Demos.RPGEditor.ItemSlot, Assembly-CSharp-firstpass
+    - Name: ItemCount
+      Entry: 3
+      Data: 0
+    - Name: Item
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Sirenix.OdinInspector.Demos.RPGEditor.ItemSlot, Assembly-CSharp-firstpass
+    - Name: ItemCount
+      Entry: 3
+      Data: 0
+    - Name: Item
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Sirenix.OdinInspector.Demos.RPGEditor.ItemSlot, Assembly-CSharp-firstpass
+    - Name: ItemCount
+      Entry: 3
+      Data: 0
+    - Name: Item
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Sirenix.OdinInspector.Demos.RPGEditor.ItemSlot, Assembly-CSharp-firstpass
+    - Name: ItemCount
+      Entry: 3
+      Data: 0
+    - Name: Item
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 

@@ -64,6 +64,32 @@
     <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleSprite.cs" />
     <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs" />
     <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleAudio.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Sample - RPG Editor/Scripts/Items/EquipableItem.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Sample - RPG Editor/Scripts/Character/Character.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Sample - RPG Editor/Scripts/Character/CharacterStats.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Sample - RPG Editor/Scripts/Misc/StatType.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Sample - RPG Editor/Scripts/Items/Armor.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Sample - RPG Editor/Scripts/Items/Item.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Sample - RPG Editor/Scripts/Items/ItemTypes.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Sample - RPG Editor/Scripts/Items/ConsumableItem.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Sample - RPG Editor/Scripts/Misc/ItemSlot.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Sample - RPG Editor/Scripts/Misc/StatValue.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Sample - RPG Editor/Scripts/Misc/StatList.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Sample - RPG Editor/Scripts/Character/CharacterEquipment.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Sample - RPG Editor/Scripts/Items/WeaponItem.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Sample - RPG Editor/Scripts/Character/CharacterAlignment.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Sample - RPG Editor/Scripts/Character/CharacterOverview.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Custom Drawers/Scripts/ValidationExample.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Custom Drawers/Scripts/GenericMenuExample.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Custom Drawers/Scripts/CustomGroupExample.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Custom Drawers/Scripts/MinesweeperExample.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Custom Drawers/Scripts/ValueAndActionResolversExample.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Custom Drawers/Scripts/CustomDrawerExample.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Custom Drawers/Scripts/GenericDrawerExample.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Custom Drawers/Scripts/PriorityExamples.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Custom Drawers/Scripts/InstancedDrawerExample.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Custom Drawers/Scripts/ReflectionExample.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Custom Drawers/Scripts/HealthBarExample.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.xml" />
@@ -84,6 +110,7 @@
      <None Include="Assets/Plugins/Sirenix/Assemblies/link.xml" />
      <None Include="Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll" />
      <None Include="Assets/Plugins/Demigiant/DOTween/readme.txt" />
+     <None Include="Assets/Plugins/Sirenix/Demos/Sample - RPG Editor/Icons/icons_by_ravenmore.txt" />
      <None Include="Assets/Plugins/Sirenix/Assemblies/NoEmitAndNoEditor/Sirenix.Utilities.dll" />
      <None Include="Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll" />
     <Reference Include="UnityEngine">
@@ -763,6 +790,18 @@
     <ProjectReference Include="Editor.csproj">
       <Project>{16FEF12A-B9C6-2C37-0D34-0E6057FEF4EE}</Project>
       <Name>Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-unity.csproj">
+      <Project>{3948D686-6312-D87C-8CC5-4CCE4F58EF71}</Project>
+      <Name>spine-unity</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-unity-editor.csproj">
+      <Project>{9ACAF7F1-CC61-D038-05C9-D8BC37158CBA}</Project>
+      <Name>spine-unity-editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-unity-examples.csproj">
+      <Project>{3ED3CA3D-BE49-5015-86FF-B60D1AA45D60}</Project>
+      <Name>spine-unity-examples</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
