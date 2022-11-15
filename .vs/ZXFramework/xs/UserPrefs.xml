@@ -1,27 +1,28 @@
 ﻿<Properties StartupConfiguration="{752CC507-48D8-CB41-305F-18D04BE4F8B0}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/HotFix/Animation/FrameAnimator.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/HotFix/UILogic/SkillEditor.cs">
     <Files>
-      <File FileName="Assets/Scripts/HotFix/Animation/AnimatorTest.cs" Line="26" Column="33" />
-      <File FileName="Assets/Scripts/HotFix/Animation/FrameAnimator.cs" Line="38" Column="14" />
+      <File FileName="Assets/Scripts/HotFix/Animation/AnimatorTest.cs" Line="12" Column="1" />
+      <File FileName="Assets/Scripts/HotFix/Animation/FrameAnimator.cs" Line="114" Column="25" />
       <File FileName="Assets/YooEditor/AssetBundleDebugger/RemotePlayerSession.cs" />
       <File FileName="Assets/Scripts/Model/ResMgr/ResUpdateManager.cs" Line="28" Column="1" />
       <File FileName="Assets/Scripts/Model/YooAsset/Runtime/YooAssets.cs" Line="1052" Column="1" />
+      <File FileName="Assets/Examples/Extension/ExtensionMain.cs" Line="4" Column="14" />
+      <File FileName="Assets/Scripts/Model/UI/ExtensionMgr.cs" Line="8" Column="11" />
+      <File FileName="Assets/Scripts/HotFix/UILogic/SkillEditor.cs" Line="5" Column="18" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ZXFramework" expanded="True">
             <Node name="Assets" expanded="True">
+              <Node name="Examples" expanded="True">
+                <Node name="Extension" expanded="True" />
+              </Node>
+              <Node name="Res" expanded="True" />
               <Node name="Scripts" expanded="True">
                 <Node name="HotFix" expanded="True">
-                  <Node name="Animation" expanded="True">
-                    <Node name="FrameAnimator.cs" selected="True" />
-                  </Node>
-                </Node>
-                <Node name="Model" expanded="True">
-                  <Node name="ResMgr" expanded="True" />
-                  <Node name="YooAsset" expanded="True">
-                    <Node name="Runtime" expanded="True" />
+                  <Node name="UILogic" expanded="True">
+                    <Node name="SkillEditor.cs" selected="True" />
                   </Node>
                 </Node>
               </Node>
@@ -35,9 +36,7 @@
   <MonoDevelop.Ide.ItemProperties.AmplifyShaderEditor PreferredExecutionTarget="5961b323-2a6a-4ff7-89a0-65831a042292" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/zhengzhengxu/Desktop/ZXFramework/Assets/Scripts/HotFix/Animation/FrameAnimator.cs" relfile="Assets/Scripts/HotFix/Animation/FrameAnimator.cs" line="37" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

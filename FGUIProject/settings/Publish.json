@@ -9,10 +9,10 @@
   "compressPNG": false,
   "codeGeneration": {
     "allowGenCode": true,
-    "codePath": "/Users/zhengzhengxu/Desktop/ZXFramework/Assets/Scripts/HotFix/UILogic",
+    "codePath": "/Users/zhengzhengxu/Desktop/ZXFramework/Assets/Scripts/HotFix/UILogic_Export",
     "classNamePrefix": "",
     "memberNamePrefix": "",
-    "packageName": "ZXFramework.Core.UI",
+    "packageName": "Bepop.Core.UI",
     "ignoreNoname": true,
     "getMemberByName": true,
     "codeType": ""

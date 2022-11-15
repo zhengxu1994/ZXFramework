@@ -58,6 +58,8 @@
   <ItemGroup>
     <Compile Include="Assets/Scripts/HotFix/Animation/AnimatorTest.cs" />
     <Compile Include="Assets/Scripts/HotFix/Animation/FrameAnimator.cs" />
+    <Compile Include="Assets/Scripts/HotFix/UILogic_Export/SkillEditor/Gen_SkillEditor.cs" />
+    <Compile Include="Assets/Scripts/HotFix/UILogic/SkillEditor.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/Scripts/HotFix/HotFix.asmdef" />

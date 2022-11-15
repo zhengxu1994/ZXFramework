@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="50,10" extention="Slider">
+  <Slider titleType="valueAndmax"/>
+  <displayList>
+    <graph id="n0_a23i" name="n0" xy="0,0" size="50,10" type="rect" lineSize="1" lineColor="#A0A0A0" fillColor="#F0F0F0">
+      <relation target="" sidePair="width,height"/>
+    </graph>
+    <graph id="n1_a23i" name="bar" xy="5,3" size="40,4" type="rect" lineSize="0" fillColor="#3399FF"/>
+    <text id="n2_a23i" name="title" xy="0,-5" size="50,16" autoSize="none" align="center" fontSize="12">
+      <relation target="" sidePair="width"/>
+    </text>
+    <component id="n3_a23i" name="grip" xy="40,-5" src="a23ik">
+      <relation target="n1_a23i" sidePair="right-right"/>
+    </component>
+  </displayList>
+</component>

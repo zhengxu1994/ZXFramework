@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="40,40" extention="Button">
+  <controller name="button" pages="2,up,3,down" selected="0"/>
+  <displayList>
+    <loader id="n0_a23i" name="icon" xy="20,20" pivot="0.5,0.5" anchor="true" size="40,40" url="ui://kosb0j94a23ie" align="center" vAlign="middle" fill="scaleNoBorder" autoSize="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <text id="n1_a23i" name="title" xy="15,5" pivot="0.5,0.5" size="10,29" font="ui://Font/SourceHanSansCN-Medium" fontSize="20" align="center" vAlign="middle" autoClearText="true" text="">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+  <Button/>
+  <relation target="n0_a23i" sidePair="width-width,height-height"/>
+</component>

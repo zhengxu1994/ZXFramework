@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1136,640">
-  <displayList/>
+  <displayList>
+    <component id="n0_a23i" name="btn_play" src="a23i2" fileName="Com/CommonButton.xml" xy="499,4" size="64,64" group="n3_a23i" scale="0.6,0.6">
+      <Button icon="ui://kosb0j94a23ij"/>
+    </component>
+    <component id="n1_a23i" name="btn_pause" src="a23i2" fileName="Com/CommonButton.xml" xy="548,4" size="64,64" group="n3_a23i" scale="0.6,0.6">
+      <Button icon="ui://kosb0j94a23ih"/>
+    </component>
+    <component id="n2_a23i" name="btn_next" src="a23i2" fileName="Com/CommonButton.xml" xy="596,4" group="n3_a23i">
+      <Button icon="ui://kosb0j94a23ie"/>
+    </component>
+    <group id="n3_a23i" name="n3" xy="499,4" size="137,64"/>
+    <component id="n4_a23i" name="frame_Slider" src="a23il" fileName="Com/FrameSilder.xml" xy="68,50" size="1000,10">
+      <relation target="" sidePair="center-center,top-top"/>
+      <Slider value="50" max="100"/>
+    </component>
+  </displayList>
   <scriptData toCS="true"/>
 </component>

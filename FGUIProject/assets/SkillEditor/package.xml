@@ -2,6 +2,25 @@
 <packageDescription id="kosb0j94">
   <resources>
     <component id="l1bn1" name="SkillEditor.xml" path="/" exported="true"/>
+    <component id="a23i2" name="CommonButton.xml" path="/Com/"/>
+    <image id="a23i3" name="arw_翻页指示箭头.png" path="/Res/"/>
+    <image id="a23i4" name="arw_翻页指示箭头2.png" path="/Res/"/>
+    <image id="a23i5" name="btn_副按钮.png" path="/Res/"/>
+    <image id="a23i6" name="btn_世界_撤退.png" path="/Res/"/>
+    <image id="a23i7" name="btn_世界_详情.png" path="/Res/"/>
+    <image id="a23i8" name="btn_小_副按钮.png" path="/Res/"/>
+    <image id="a23i9" name="btn_小_虚按钮.png" path="/Res/"/>
+    <image id="a23ia" name="btn_小_主按钮.png" path="/Res/"/>
+    <image id="a23ib" name="btn_虚按钮_游客登录.png" path="/Res/"/>
+    <image id="a23ic" name="btn_战令_前往.png" path="/Res/"/>
+    <image id="a23id" name="btn_主按钮.png" path="/Res/"/>
+    <image id="a23ie" name="btn_免费.png" path="/Res/"/>
+    <image id="a23if" name="btn_撤销.png" path="/Res/"/>
+    <image id="a23ig" name="btn_出阵_前往.png" path="/Res/"/>
+    <image id="a23ih" name="btn_战斗_播放.png" path="/Res/"/>
+    <image id="a23ij" name="btn_旅馆_暂停.png" path="/Res/"/>
+    <component id="a23ik" name="FrameSilder_grip.xml" path="/Com/"/>
+    <component id="a23il" name="FrameSilder.xml" path="/Com/"/>
   </resources>
-  <publish name="" genCode="true" codePath="/Users/zhengzhengxu/Desktop/ZXFramework/Assets/Editor/SkillEditor/UILogic"/>
+  <publish name="" genCode="true"/>
 </packageDescription>
