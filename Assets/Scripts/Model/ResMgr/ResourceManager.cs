@@ -192,6 +192,13 @@ namespace Resource
                 UIPackage.RemovePackage(pkgName);
         }
 
+
+        //加载spine资源
+        //public Object LoadSpineAsset(string name)
+        //{
+
+        //}
+
         public void UnLoadUnusedAssets()
         {
             YooAssets.UnloadUnusedAssets();

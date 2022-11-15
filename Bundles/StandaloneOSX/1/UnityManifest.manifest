@@ -1,0 +1,14 @@
+ManifestFileVersion: 0
+CRC: 3701486897
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: assets/res/prefab.bundle
+      Dependencies: {}
+    Info_1:
+      Name: assets/res/scene.bundle
+      Dependencies:
+        Dependency_0: assets/res/prefab.bundle
+    Info_2:
+      Name: assets/res/spriteres.bundle
+      Dependencies: {}

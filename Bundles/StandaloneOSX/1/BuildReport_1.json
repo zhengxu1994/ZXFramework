@@ -1,0 +1,181 @@
+{
+    "Summary": {
+        "UnityVersion": "2020.3.3f1",
+        "BuildTime": "11/15/2022 9:47:19 AM",
+        "BuildSeconds": 26,
+        "BuildTarget": 2,
+        "BuildMode": 0,
+        "BuildVersion": 1,
+        "BuildinTags": "",
+        "EnableAddressable": false,
+        "AppendFileExtension": false,
+        "CopyBuildinTagFiles": true,
+        "AutoCollectShaders": true,
+        "ShadersBundleName": "myshaders",
+        "EncryptionServicesClassName": "GameEncryption",
+        "CompressOption": 2,
+        "DisableWriteTypeTree": false,
+        "IgnoreTypeTreeChanges": true,
+        "AssetFileTotalCount": 12,
+        "AllBundleTotalCount": 3,
+        "AllBundleTotalSize": 4698086,
+        "BuildinBundleTotalCount": 3,
+        "BuildinBundleTotalSize": 4698086,
+        "EncryptedBundleTotalCount": 0,
+        "EncryptedBundleTotalSize": 0,
+        "RawBundleTotalCount": 0,
+        "RawBundleTotalSize": 0
+    },
+    "AssetInfos": [
+        {
+            "Address": "",
+            "AssetPath": "Assets/Res/Prefab/Cube.prefab",
+            "AssetGUID": "51ab9c90616c344d68cbe0dffcfb2f5e",
+            "AssetTags": [],
+            "MainBundleName": "assets/res/prefab.bundle",
+            "MainBundleSize": 49111,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "",
+            "AssetPath": "Assets/Res/Scene/CameraDemo.unity",
+            "AssetGUID": "f8b5d025f3fa84de8b2cad337c102518",
+            "AssetTags": [],
+            "MainBundleName": "assets/res/scene.bundle",
+            "MainBundleSize": 344573,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "",
+            "AssetPath": "Assets/Res/Scene/RedDotDemo.unity",
+            "AssetGUID": "796b5d0cca7a143f59cf556afd9c9afe",
+            "AssetTags": [],
+            "MainBundleName": "assets/res/scene.bundle",
+            "MainBundleSize": 344573,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "",
+            "AssetPath": "Assets/Res/Scene/YooAssetDemo.unity",
+            "AssetGUID": "cc512e0fe7cfd4850bd25679d7f6e98d",
+            "AssetTags": [],
+            "MainBundleName": "assets/res/scene.bundle",
+            "MainBundleSize": 344573,
+            "DependBundles": [
+                "assets/res/prefab.bundle"
+            ],
+            "DependAssets": [
+                "Assets/Res/Prefab/Cube.prefab"
+            ]
+        },
+        {
+            "Address": "",
+            "AssetPath": "Assets/Res/SpriteRes/h1001_0.png",
+            "AssetGUID": "6f0217e89639842b2bddb41cf6a7debc",
+            "AssetTags": [],
+            "MainBundleName": "assets/res/spriteres.bundle",
+            "MainBundleSize": 4304402,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "",
+            "AssetPath": "Assets/Res/SpriteRes/h1001_1.png",
+            "AssetGUID": "648a80e2e71f3432b869365310f107d9",
+            "AssetTags": [],
+            "MainBundleName": "assets/res/spriteres.bundle",
+            "MainBundleSize": 4304402,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "",
+            "AssetPath": "Assets/Res/SpriteRes/h1001_2.png",
+            "AssetGUID": "84642c980bf964feda6184fdc057bdfa",
+            "AssetTags": [],
+            "MainBundleName": "assets/res/spriteres.bundle",
+            "MainBundleSize": 4304402,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "",
+            "AssetPath": "Assets/Res/SpriteRes/h1001_3.png",
+            "AssetGUID": "b26f1c961265a4261b8c3931a2127c01",
+            "AssetTags": [],
+            "MainBundleName": "assets/res/spriteres.bundle",
+            "MainBundleSize": 4304402,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "",
+            "AssetPath": "Assets/Res/SpriteRes/h1001_4.png",
+            "AssetGUID": "2f12c7eb71fd54ef8a4a495a5355d1f6",
+            "AssetTags": [],
+            "MainBundleName": "assets/res/spriteres.bundle",
+            "MainBundleSize": 4304402,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "",
+            "AssetPath": "Assets/Res/SpriteRes/h1001_5.png",
+            "AssetGUID": "3e04de94cf38640f88875671bf3348f4",
+            "AssetTags": [],
+            "MainBundleName": "assets/res/spriteres.bundle",
+            "MainBundleSize": 4304402,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "",
+            "AssetPath": "Assets/Res/SpriteRes/h1001_6.png",
+            "AssetGUID": "e064ac7928db941b59ba45c688b12144",
+            "AssetTags": [],
+            "MainBundleName": "assets/res/spriteres.bundle",
+            "MainBundleSize": 4304402,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "",
+            "AssetPath": "Assets/Res/SpriteRes/h1001_7.png",
+            "AssetGUID": "b125105cbfba04f8a8cb68a65825497a",
+            "AssetTags": [],
+            "MainBundleName": "assets/res/spriteres.bundle",
+            "MainBundleSize": 4304402,
+            "DependBundles": [],
+            "DependAssets": []
+        }
+    ],
+    "BundleInfos": [
+        {
+            "BundleName": "assets/res/prefab.bundle",
+            "Hash": "572e887a28f46942e3f47efa52394be6",
+            "CRC": "f025d39e",
+            "SizeBytes": 49111,
+            "Tags": [],
+            "Flags": 2
+        },
+        {
+            "BundleName": "assets/res/scene.bundle",
+            "Hash": "bc7ccd7e7a75a37e5502d781b2bb24dd",
+            "CRC": "6d0a1b3f",
+            "SizeBytes": 344573,
+            "Tags": [],
+            "Flags": 2
+        },
+        {
+            "BundleName": "assets/res/spriteres.bundle",
+            "Hash": "622a5b491e1bc12d68e6610331b84dbb",
+            "CRC": "9321cdcf",
+            "SizeBytes": 4304402,
+            "Tags": [],
+            "Flags": 2
+        }
+    ]
+}

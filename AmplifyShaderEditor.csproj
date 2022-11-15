@@ -448,8 +448,8 @@
     <Compile Include="Assets/AmplifyShaderEditor/Plugins/Editor/Nodes/ImageEffects/SimpleContrastOpNode.cs" />
     <Compile Include="Assets/AmplifyShaderEditor/Plugins/Editor/Utils/IOUtils.cs" />
     <Compile Include="Assets/AmplifyShaderEditor/Plugins/Editor/Nodes/HelperFuncs/GammaToLinearNode.cs" />
-    <Compile Include="Assets/AmplifyShaderEditor/Plugins/Editor/Nodes/Textures/PannerNode.cs" />
     <Compile Include="Assets/AmplifyShaderEditor/Plugins/Editor/Graphs/NodeGrid.cs" />
+    <Compile Include="Assets/AmplifyShaderEditor/Plugins/Editor/Nodes/Textures/PannerNode.cs" />
     <Compile Include="Assets/AmplifyShaderEditor/Plugins/Editor/Nodes/Master/ZBufferOpHelper.cs" />
     <Compile Include="Assets/AmplifyShaderEditor/Plugins/Editor/Nodes/Master/RenderingOptionsOpHelper.cs" />
     <Compile Include="Assets/AmplifyShaderEditor/Plugins/Editor/Nodes/SurfaceShaderInputs/WorldNormalInputsNode.cs" />
@@ -966,6 +966,9 @@
     </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    </Reference>
+    <Reference Include="TexturePackerImporter">
+      <HintPath>Assets/codeandweb.com/Editor/TexturePackerImporter.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.OdinInspector.Editor">
       <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>

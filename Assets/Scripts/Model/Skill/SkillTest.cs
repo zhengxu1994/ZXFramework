@@ -44,6 +44,7 @@ public class SkillTest : MonoBehaviour
 
         //SkillData skillData = new SkillData();
         //skillData.TestSkill();
+#if UNITY_EDITOR
         var skillData = AssetDatabase.LoadAssetAtPath<SkillData>("Assets/Configs/Config_SkillData.asset");
 
         var skill = playerEntity.AddSkill(skillData);
@@ -58,6 +59,7 @@ public class SkillTest : MonoBehaviour
             //模拟下
             skills.AddFirst(skill);
         }
+#endif
     }
 
     private void Update()

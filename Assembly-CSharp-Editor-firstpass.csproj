@@ -56,18 +56,18 @@
     <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/Plugins/Sirenix/Demos/Editor Windows/Scripts/Editor/SomeTextureToolWindow.cs" />
-    <Compile Include="Assets/Plugins/Sirenix/Demos/Editor Windows/Scripts/Editor/OdinMenuEditorWindowExample.cs" />
-    <Compile Include="Assets/Plugins/Sirenix/Demos/Editor Windows/Scripts/Editor/QuicklyInspectObjects.cs" />
-    <Compile Include="Assets/Plugins/Sirenix/Demos/Editor Windows/Scripts/Editor/BasicOdinEditorExampleWindow.cs" />
-    <Compile Include="Assets/Plugins/Sirenix/Demos/Editor Windows/Scripts/Editor/OverrideGetTargetsExampleWindow.cs" />
-    <Compile Include="Assets/Plugins/Sirenix/Demos/Editor Windows/Scripts/Editor/OdinMenuStyleExample.cs" />
-    <Compile Include="Assets/Plugins/Sirenix/Demos/Editor Windows/Scripts/Editor/SomeData.cs" />
-    <Compile Include="Assets/Plugins/Sirenix/Demos/Sample - RPG Editor/Scripts/Editor/ItemDrawer.cs" />
-    <Compile Include="Assets/Plugins/Sirenix/Demos/Sample - RPG Editor/Scripts/Editor/RPGEditorWindow.cs" />
     <Compile Include="Assets/Plugins/Sirenix/Demos/Sample - RPG Editor/Scripts/Editor/ItemSlotCellDrawer.cs" />
-    <Compile Include="Assets/Plugins/Sirenix/Demos/Sample - RPG Editor/Scripts/Editor/CharacterTable.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Editor Windows/Scripts/Editor/OdinMenuStyleExample.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Editor Windows/Scripts/Editor/OdinMenuEditorWindowExample.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Sample - RPG Editor/Scripts/Editor/ItemDrawer.cs" />
     <Compile Include="Assets/Plugins/Sirenix/Demos/Sample - RPG Editor/Scripts/Editor/ScriptableObjectCreator.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Sample - RPG Editor/Scripts/Editor/CharacterTable.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Editor Windows/Scripts/Editor/SomeData.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Sample - RPG Editor/Scripts/Editor/RPGEditorWindow.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Editor Windows/Scripts/Editor/OverrideGetTargetsExampleWindow.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Editor Windows/Scripts/Editor/SomeTextureToolWindow.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Editor Windows/Scripts/Editor/BasicOdinEditorExampleWindow.cs" />
+    <Compile Include="Assets/Plugins/Sirenix/Demos/Editor Windows/Scripts/Editor/QuicklyInspectObjects.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll" />
@@ -311,6 +311,9 @@
     </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    </Reference>
+    <Reference Include="TexturePackerImporter">
+      <HintPath>Assets/codeandweb.com/Editor/TexturePackerImporter.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.OdinInspector.Editor">
       <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
@@ -720,6 +723,9 @@
     <Reference Include="Unity.Searcher.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
       <HintPath>Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
@@ -729,11 +735,11 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-      <HintPath>Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+      <HintPath>Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ShaderGraph.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
@@ -771,6 +777,14 @@
       <Project>{69044FDB-2A84-9288-3724-4F51D50A8400}</Project>
       <Name>Sirenix.OdinInspector.CompatibilityLayer.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="HotFix.csproj">
+      <Project>{14298360-783C-D655-487A-05B5B7512421}</Project>
+      <Name>HotFix</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-unity.csproj">
+      <Project>{3948D686-6312-D87C-8CC5-4CCE4F58EF71}</Project>
+      <Name>spine-unity</Name>
+    </ProjectReference>
     <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.csproj">
       <Project>{72B8F691-E769-6364-E2E5-9FA2786626ED}</Project>
       <Name>Sirenix.OdinInspector.CompatibilityLayer</Name>
@@ -779,25 +793,13 @@
       <Project>{D3373D54-C907-C918-4C8A-0F4E7A6EA0ED}</Project>
       <Name>Model</Name>
     </ProjectReference>
-    <ProjectReference Include="YooAsset.csproj">
-      <Project>{B414CEAD-7FD7-B317-A88A-DE99FBBAF2E6}</Project>
-      <Name>YooAsset</Name>
-    </ProjectReference>
-    <ProjectReference Include="Editor.csproj">
-      <Project>{16FEF12A-B9C6-2C37-0D34-0E6057FEF4EE}</Project>
-      <Name>Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="spine-unity.csproj">
-      <Project>{3948D686-6312-D87C-8CC5-4CCE4F58EF71}</Project>
-      <Name>spine-unity</Name>
-    </ProjectReference>
     <ProjectReference Include="spine-unity-editor.csproj">
       <Project>{9ACAF7F1-CC61-D038-05C9-D8BC37158CBA}</Project>
       <Name>spine-unity-editor</Name>
     </ProjectReference>
-    <ProjectReference Include="spine-unity-examples.csproj">
-      <Project>{3ED3CA3D-BE49-5015-86FF-B60D1AA45D60}</Project>
-      <Name>spine-unity-examples</Name>
+    <ProjectReference Include="YooAsset.csproj">
+      <Project>{B414CEAD-7FD7-B317-A88A-DE99FBBAF2E6}</Project>
+      <Name>YooAsset</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

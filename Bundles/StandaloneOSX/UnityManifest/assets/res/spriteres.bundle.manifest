@@ -1,0 +1,26 @@
+ManifestFileVersion: 0
+CRC: 3616770120
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e10dc63c8384e07b69675a1805ba4372
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4df8c69f2c8a6ad9e3cbf82bb83e4dc3
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Res/SpriteRes/h1001_5.png
+- Assets/Res/SpriteRes/h1001_0.png
+- Assets/Res/SpriteRes/h1001_4.png
+- Assets/Res/SpriteRes/h1001_1.png
+- Assets/Res/SpriteRes/h1001_3.png
+- Assets/Res/SpriteRes/h1001_6.png
+- Assets/Res/SpriteRes/h1001_2.png
+- Assets/Res/SpriteRes/h1001_7.png
+Dependencies: []

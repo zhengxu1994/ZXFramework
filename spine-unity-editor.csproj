@@ -56,47 +56,11 @@
     <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/Utility/DataReloadHandler.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/Utility/SpineEditorUtilities.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/Asset Types/AnimationReferenceAssetEditor.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/Utility/SpineInspectorUtility.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/Windows/SkeletonDebugWindow.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/Utility/AssetUtility.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/SpineAttributeDrawers.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/Components/SkeletonUtilityInspector.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Modules/SkeletonRenderSeparator/Editor/SkeletonPartsRendererInspector.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/Components/SkeletonRendererCustomMaterialsInspector.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/Components/BoundingBoxFollowerInspector.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/Components/SkeletonAnimationInspector.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/Shaders/SpineShaderWithOutlineGUI.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/Components/SkeletonMecanimInspector.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/Utility/Icons.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/Components/SkeletonUtilityBoneInspector.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/Asset Types/SkeletonDataAssetInspector.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/Utility/Preferences.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/Utility/BuildSettings.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/Components/PointFollowerInspector.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/Windows/SpinePreferences.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/Windows/SkeletonBaker.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Modules/SlotBlendModes/Editor/SlotBlendModesEditor.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/Windows/SkeletonBakingWindow.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/Utility/AssetDatabaseAvailabilityDetector.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/Components/BoneFollowerInspector.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/Components/BoneFollowerGraphicInspector.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/Asset Types/SpineAtlasAssetInspector.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/Menus.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/Shaders/SpineSpriteShaderGUI.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/Utility/SpineMaskUtilities.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/Utility/Instantiation.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/Components/SkeletonGraphicInspector.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/Utility/SpineHandles.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Modules/SkeletonRenderSeparator/Editor/SkeletonRenderSeparatorInspector.cs" />
-    <Compile Include="Assets/Editor/Spine/spine-unity/Editor/Components/SkeletonRendererInspector.cs" />
+    <Compile Include="Assets/Plugins/Spine/spine-unity/Modules/SlotBlendModes/Editor/SlotBlendModesEditor.cs" />
   </ItemGroup>
   <ItemGroup>
-     <None Include="Assets/Editor/Spine/version.txt" />
-     <None Include="Assets/Editor/Spine/spine-unity-editor.asmdef" />
-     <None Include="Assets/Editor/Spine/spine-unity/Editor/Resources/SpineAssetDatabaseMarker.txt" />
+     <None Include="Assets/Plugins/Spine/version.txt" />
+     <None Include="Assets/Plugins/Spine/spine-unity-editor.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -336,6 +300,9 @@
     </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    </Reference>
+    <Reference Include="TexturePackerImporter">
+      <HintPath>Assets/codeandweb.com/Editor/TexturePackerImporter.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.OdinInspector.Editor">
       <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>

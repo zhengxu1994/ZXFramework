@@ -1,0 +1,33 @@
+version: 2
+importPivots: 1
+tpsheetFileNames:
+- Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
+- Assets/Res/SpriteRes/h1001_0.tpsheet
+- Assets/Res/SpriteRes/h1001_1.tpsheet
+- Assets/Res/SpriteRes/h1001_2.tpsheet
+- Assets/Res/SpriteRes/h1001_3.tpsheet
+- Assets/Res/SpriteRes/h1001_4.tpsheet
+- Assets/Res/SpriteRes/h1001_5.tpsheet
+- Assets/Res/SpriteRes/h1001_6.tpsheet
+- Assets/Res/SpriteRes/h1001_7.tpsheet
+textureFileNames:
+- Assets/codeandweb.com/Example/SpriteSheet/sprites.png
+- Assets/Res/SpriteRes/h1001_0.png
+- Assets/Res/SpriteRes/h1001_1.png
+- Assets/Res/SpriteRes/h1001_2.png
+- Assets/Res/SpriteRes/h1001_3.png
+- Assets/Res/SpriteRes/h1001_4.png
+- Assets/Res/SpriteRes/h1001_5.png
+- Assets/Res/SpriteRes/h1001_6.png
+- Assets/Res/SpriteRes/h1001_7.png
+normalmapFileNames:
+- Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+enableDebugOutput: 0

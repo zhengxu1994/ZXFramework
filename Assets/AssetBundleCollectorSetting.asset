@@ -38,3 +38,14 @@ MonoBehaviour:
       PackRuleName: PackDirectory
       FilterRuleName: CollectScene
       AssetTags: 
+  - GroupName: SpriteSheet
+    GroupDesc: "\u52A8\u4F5C\u5E27\u52A8\u753B"
+    AssetTags: 
+    ActiveRuleName: EnableGroup
+    Collectors:
+    - CollectPath: Assets/Res/SpriteRes
+      CollectorType: 0
+      AddressRuleName: AddressByFileName
+      PackRuleName: PackDirectory
+      FilterRuleName: CollectSprite
+      AssetTags: 

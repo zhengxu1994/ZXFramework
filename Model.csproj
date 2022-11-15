@@ -66,7 +66,6 @@
     <Compile Include="Assets/Scripts/Model/FGUI/UI/PackageItem.cs" />
     <Compile Include="Assets/Scripts/Model/Effect/ParticleNode.cs" />
     <Compile Include="Assets/Scripts/Model/FGUI/Tween/TweenManager.cs" />
-    <Compile Include="Assets/Scripts/Model/FGUI/Editor/StageCameraEditor.cs" />
     <Compile Include="Assets/Scripts/Model/UI/I18nMgr.cs" />
     <Compile Include="Assets/Scripts/Model/Tool/Utility/Log.cs" />
     <Compile Include="Assets/Scripts/Model/ResMgr/ResUpdateManager.cs" />
@@ -143,7 +142,6 @@
     <Compile Include="Assets/Scripts/Model/FGUI/Core/NGraphics.cs" />
     <Compile Include="Assets/Scripts/Model/Tool/Pool/Pool.cs" />
     <Compile Include="Assets/Scripts/Model/FGUI/UI/Margin.cs" />
-    <Compile Include="Assets/Scripts/Model/FGUI/Editor/UIConfigEditor.cs" />
     <Compile Include="Assets/Scripts/Model/FGUI/Gesture/SwipeGesture.cs" />
     <Compile Include="Assets/Scripts/Model/FGUI/Utils/UBBParser.cs" />
     <Compile Include="Assets/Scripts/Model/UI/CommonTopBase.cs" />
@@ -158,6 +156,7 @@
     <Compile Include="Assets/Scripts/Model/FGUI/UI/Gears/GearText.cs" />
     <Compile Include="Assets/Scripts/Model/FGUI/Core/Text/FontManager.cs" />
     <Compile Include="Assets/Scripts/Model/Skill/SkillTargetGet/SkillTargetGetter.cs" />
+    <Compile Include="Assets/Scripts/Model/Skill/SkillLogic/Base/SkillData.cs" />
     <Compile Include="Assets/Scripts/Model/FGUI/UI/GScrollBar.cs" />
     <Compile Include="Assets/Scripts/Model/FGUI/Gesture/PinchGesture.cs" />
     <Compile Include="Assets/Scripts/Model/FGUI/Core/Mesh/MeshFactory.cs" />
@@ -171,7 +170,6 @@
     <Compile Include="Assets/Scripts/Model/FGUI/Core/Mesh/EllipseMesh.cs" />
     <Compile Include="Assets/Scripts/Model/Effect/EffectMgr.cs" />
     <Compile Include="Assets/Scripts/Model/Tool/Disposable/CustomDisposable.cs" />
-    <Compile Include="Assets/Scripts/Model/FGUI/Editor/UIPainterEditor.cs" />
     <Compile Include="Assets/Scripts/Model/FGUI/UI/AsyncCreationHelper.cs" />
     <Compile Include="Assets/Scripts/Model/FGUI/UI/RelationItem.cs" />
     <Compile Include="Assets/Scripts/Model/FGUI/Utils/Html/HtmlParser.cs" />
@@ -183,7 +181,6 @@
     <Compile Include="Assets/Scripts/Model/RedDot/RedDotDemo.cs" />
     <Compile Include="Assets/Scripts/Model/FGUI/Core/Mesh/RegularPolygonMesh.cs" />
     <Compile Include="Assets/Scripts/Model/FGUI/UI/EMRenderSupport.cs" />
-    <Compile Include="Assets/Scripts/Model/FGUI/Editor/PackagesWindow.cs" />
     <Compile Include="Assets/Scripts/Model/RedDot/RedDotConst.cs" />
     <Compile Include="Assets/Scripts/Model/FGUI/UI/PopupMenu.cs" />
     <Compile Include="Assets/Scripts/Model/FGUI/UI/GSlider.cs" />
@@ -192,7 +189,6 @@
     <Compile Include="Assets/Scripts/Model/Tool/Factory/NonPublicObjectFactory.cs" />
     <Compile Include="Assets/Scripts/Model/Tool/Singleton/MonoSingletonProperty.cs" />
     <Compile Include="Assets/Scripts/Model/SceneMgr/SceneBase.cs" />
-    <Compile Include="Assets/Scripts/Model/FGUI/Editor/EditorToolSet.cs" />
     <Compile Include="Assets/Scripts/Model/FGUI/Utils/Html/IHtmlPageContext.cs" />
     <Compile Include="Assets/Scripts/Model/FGUI/Core/CaptureCamera.cs" />
     <Compile Include="Assets/Scripts/Model/FGUI/Core/Mesh/CompositeMesh.cs" />
@@ -202,8 +198,8 @@
     <Compile Include="Assets/Scripts/Model/Tool/Disposable/Trigger/OnDisableDisposeTrigger.cs" />
     <Compile Include="Assets/Scripts/Model/Tool/Singleton/ReplaceableMonoSingleton.cs" />
     <Compile Include="Assets/Scripts/Model/SceneMgr/SceneMgr.cs" />
-    <Compile Include="Assets/Scripts/Model/FGUI/Core/Text/InputTextField.cs" />
     <Compile Include="Assets/Scripts/Model/UI/UIBase.cs" />
+    <Compile Include="Assets/Scripts/Model/FGUI/Core/Text/InputTextField.cs" />
     <Compile Include="Assets/Scripts/Model/FGUI/Core/HitTest/MeshColliderHitTest.cs" />
     <Compile Include="Assets/Scripts/Model/FGUI/UI/GTree.cs" />
     <Compile Include="Assets/Scripts/Model/FGUI/UI/GLoader.cs" />
@@ -241,8 +237,6 @@
     <Compile Include="Assets/Scripts/Model/FGUI/Core/StageEngine.cs" />
     <Compile Include="Assets/Scripts/Model/FGUI/UI/GTextInput.cs" />
     <Compile Include="Assets/Scripts/Model/FGUI/UI/Relations.cs" />
-    <Compile Include="Assets/Scripts/Model/FGUI/Editor/UIContentScalerEditor.cs" />
-    <Compile Include="Assets/Scripts/Model/FGUI/Editor/DisplayObjectEditor.cs" />
     <Compile Include="Assets/Scripts/Model/FGUI/UI/GGroup.cs" />
     <Compile Include="Assets/Scripts/Model/FGUI/UI/Window.cs" />
     <Compile Include="Assets/Scripts/Model/FGUI/Core/Text/TextFormat.cs" />
@@ -282,7 +276,6 @@
     <Compile Include="Assets/Scripts/Model/FGUI/Utils/Html/HtmlPageContext.cs" />
     <Compile Include="Assets/Scripts/Model/ResMgr/ResourceManager.cs" />
     <Compile Include="Assets/Scripts/Model/Tool/CSharpExtension/TextureExtensions.cs" />
-    <Compile Include="Assets/Scripts/Model/FGUI/Editor/UIPanelEditor.cs" />
     <Compile Include="Assets/Scripts/Model/FGUI/UI/GLabel.cs" />
     <Compile Include="Assets/Scripts/Model/Tool/Singleton/MonoSingletonPath.cs" />
     <Compile Include="Assets/Scripts/Model/Camera/CameraController.cs" />
@@ -307,7 +300,6 @@
     <Compile Include="Assets/Scripts/Model/FGUI/Tween/TweenValue.cs" />
     <Compile Include="Assets/Scripts/Model/Tool/Notifaction/NotifactionCenter.cs" />
     <Compile Include="Assets/Scripts/Model/FGUI/Gesture/LongPressGesture.cs" />
-    <Compile Include="Assets/Scripts/Model/Skill/SkillLogic/Base/SkillData.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/Scripts/Model/Model.asmdef" />
@@ -550,6 +542,9 @@
     </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    </Reference>
+    <Reference Include="TexturePackerImporter">
+      <HintPath>Assets/codeandweb.com/Editor/TexturePackerImporter.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.OdinInspector.Editor">
       <HintPath>Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>

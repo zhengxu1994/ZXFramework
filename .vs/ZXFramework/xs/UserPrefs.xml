@@ -1,36 +1,30 @@
 ﻿<Properties StartupConfiguration="{752CC507-48D8-CB41-305F-18D04BE4F8B0}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Plugins/Sirenix/Demos/Custom Drawers/Scripts/InstancedDrawerExample.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/HotFix/Animation/FrameAnimator.cs">
     <Files>
-      <File FileName="Assets/Scripts/Model/Skill/SkillTest.cs" Line="47" Column="104" />
-      <File FileName="Assets/Scripts/Model/Skill/SkillLogic/Base/SkillData.cs" />
-      <File FileName="Assets/Scripts/Model/Skill/SkillTargetGet/SkillTargetGetter.cs" />
-      <File FileName="Assets/Scripts/Model/Skill/SkillLogic/Base/SkillBase.cs" />
-      <File FileName="Assets/Scripts/Model/Skill/SkillLogic/SkillEffect/SkillEffectBase.cs" />
-      <File FileName="Assets/Scripts/Model/Skill/SkillLogic/Buff.cs" Line="196" Column="54" />
-      <File FileName="Assets/Editor/SkillEditor/NewClass.cs" Line="22" Column="1" />
-      <File FileName="Assets/Plugins/Sirenix/Demos/Editor Windows/Scripts/Editor/BasicOdinEditorExampleWindow.cs" Line="10" Column="18" />
-      <File FileName="Assets/Plugins/Sirenix/Demos/Custom Drawers/Scripts/InstancedDrawerExample.cs" Line="40" Column="10" />
+      <File FileName="Assets/Scripts/HotFix/Animation/AnimatorTest.cs" Line="26" Column="33" />
+      <File FileName="Assets/Scripts/HotFix/Animation/FrameAnimator.cs" Line="38" Column="14" />
+      <File FileName="Assets/YooEditor/AssetBundleDebugger/RemotePlayerSession.cs" />
+      <File FileName="Assets/Scripts/Model/ResMgr/ResUpdateManager.cs" Line="28" Column="1" />
+      <File FileName="Assets/Scripts/Model/YooAsset/Runtime/YooAssets.cs" Line="1052" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ZXFramework" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="Editor" expanded="True">
-                <Node name="SkillEditor" expanded="True" />
-              </Node>
-              <Node name="Plugins" expanded="True">
-                <Node name="Sirenix" expanded="True">
-                  <Node name="Demos" expanded="True">
-                    <Node name="Custom Drawers" expanded="True">
-                      <Node name="Scripts" expanded="True">
-                        <Node name="InstancedDrawerExample.cs" selected="True" />
-                      </Node>
-                    </Node>
+              <Node name="Scripts" expanded="True">
+                <Node name="HotFix" expanded="True">
+                  <Node name="Animation" expanded="True">
+                    <Node name="FrameAnimator.cs" selected="True" />
+                  </Node>
+                </Node>
+                <Node name="Model" expanded="True">
+                  <Node name="ResMgr" expanded="True" />
+                  <Node name="YooAsset" expanded="True">
+                    <Node name="Runtime" expanded="True" />
                   </Node>
                 </Node>
               </Node>
-              <Node name="Shader" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -38,10 +32,12 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.AmplifyShaderEditor PreferredExecutionTarget="39bfae2f-5bfe-44a8-b1ff-0ffdd7e4b986" />
+  <MonoDevelop.Ide.ItemProperties.AmplifyShaderEditor PreferredExecutionTarget="5961b323-2a6a-4ff7-89a0-65831a042292" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/zhengzhengxu/Desktop/ZXFramework/Assets/Scripts/HotFix/Animation/FrameAnimator.cs" relfile="Assets/Scripts/HotFix/Animation/FrameAnimator.cs" line="37" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
