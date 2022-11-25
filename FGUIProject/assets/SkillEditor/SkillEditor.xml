@@ -15,6 +15,15 @@
       <relation target="" sidePair="center-center,top-top"/>
       <Slider value="50" max="100"/>
     </component>
+    <text id="n5_a23i" name="input_skillId" xy="4,70" size="84,19" fontSize="12" autoSize="none" text="" input="true" prompt="请输入技能ID:"/>
+    <component id="n6_a23i" name="btn_Import" src="a23i2" fileName="Com/CommonButton.xml" xy="91,67" size="162,50" scale="0.5,0.5">
+      <Button title="导入技能配置" titleColor="#ffffff" titleFontSize="25" icon="ui://kosb0j94a23ia"/>
+    </component>
+    <text id="n7_a23i" name="input_totalFrame" xy="68,23" size="70,19" fontSize="12" autoSize="none" text="" input="true" prompt="请输入总帧数"/>
+    <text id="n8_a23i" name="input_heroId" xy="4,98" size="84,19" fontSize="12" autoSize="none" text="" input="true" prompt="请输入人物ID:"/>
+    <component id="n9_a23i" name="btn_createHero" src="a23i2" fileName="Com/CommonButton.xml" xy="91,95" size="162,50" scale="0.5,0.5">
+      <Button title="创建人物" titleColor="#ffffff" titleFontSize="25" icon="ui://kosb0j94a23ia"/>
+    </component>
   </displayList>
   <scriptData toCS="true"/>
 </component>

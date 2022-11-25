@@ -13,11 +13,13 @@ namespace Bepop.Core.UI
 
             AddUI("Loading", "LoadingUI").SetLayer(UILayerEnum.Waiting).SetFullScreen(true);
 
-            AddUI("Main", "MainUI","",CommonTopState.Main).SetRoot(true);
+            AddUI("Main", "MainUI", "", CommonTopState.Main).SetRoot(true);
 
             AddUI("Setting", "SettingUI").SetModal(true);
 
             AddUI("Shop", "ShopUI", "shop_title").SetFullScreen(true).SetHideBlow(true);
+
+            AddUI("SkillEditor", "SkillEditor").SetRoot(true);
         }
 
         private  void InitUIConfigWithData()

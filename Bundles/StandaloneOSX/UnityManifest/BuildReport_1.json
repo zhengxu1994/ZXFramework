@@ -1,8 +1,8 @@
 {
     "Summary": {
         "UnityVersion": "2020.3.3f1",
-        "BuildTime": "11/15/2022 9:47:19 AM",
-        "BuildSeconds": 26,
+        "BuildTime": "11/17/2022 9:53:24 AM",
+        "BuildSeconds": 29,
         "BuildTarget": 2,
         "BuildMode": 0,
         "BuildVersion": 1,
@@ -16,11 +16,11 @@
         "CompressOption": 2,
         "DisableWriteTypeTree": false,
         "IgnoreTypeTreeChanges": true,
-        "AssetFileTotalCount": 12,
-        "AllBundleTotalCount": 3,
-        "AllBundleTotalSize": 4698086,
-        "BuildinBundleTotalCount": 3,
-        "BuildinBundleTotalSize": 4698086,
+        "AssetFileTotalCount": 15,
+        "AllBundleTotalCount": 4,
+        "AllBundleTotalSize": 4710113,
+        "BuildinBundleTotalCount": 4,
+        "BuildinBundleTotalSize": 4710113,
         "EncryptedBundleTotalCount": 0,
         "EncryptedBundleTotalSize": 0,
         "RawBundleTotalCount": 0,
@@ -150,6 +150,36 @@
             "MainBundleSize": 4304402,
             "DependBundles": [],
             "DependAssets": []
+        },
+        {
+            "Address": "",
+            "AssetPath": "Assets/Res/FGUI/SkillEditor_atlas0!a.png",
+            "AssetGUID": "e3af47b974a9f40baaeadf0c68b1a231",
+            "AssetTags": [],
+            "MainBundleName": "assets/res/fgui.bundle",
+            "MainBundleSize": 12027,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "",
+            "AssetPath": "Assets/Res/FGUI/SkillEditor_atlas0.png",
+            "AssetGUID": "1c658ecdc25254602a22ea9665a3f137",
+            "AssetTags": [],
+            "MainBundleName": "assets/res/fgui.bundle",
+            "MainBundleSize": 12027,
+            "DependBundles": [],
+            "DependAssets": []
+        },
+        {
+            "Address": "",
+            "AssetPath": "Assets/Res/FGUI/SkillEditor_fui.bytes",
+            "AssetGUID": "640b94163199843a084c4b135e0994a1",
+            "AssetTags": [],
+            "MainBundleName": "assets/res/fgui.bundle",
+            "MainBundleSize": 12027,
+            "DependBundles": [],
+            "DependAssets": []
         }
     ],
     "BundleInfos": [
@@ -174,6 +204,14 @@
             "Hash": "622a5b491e1bc12d68e6610331b84dbb",
             "CRC": "9321cdcf",
             "SizeBytes": 4304402,
+            "Tags": [],
+            "Flags": 2
+        },
+        {
+            "BundleName": "assets/res/fgui.bundle",
+            "Hash": "11acfb4fe9ec3a8c40c4fbef6cea81f9",
+            "CRC": "e6f43dd6",
+            "SizeBytes": 12027,
             "Tags": [],
             "Flags": 2
         }

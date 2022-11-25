@@ -49,3 +49,14 @@ MonoBehaviour:
       PackRuleName: PackDirectory
       FilterRuleName: CollectSprite
       AssetTags: 
+  - GroupName: FGUI
+    GroupDesc: "ui\u8D44\u6E90\u5305"
+    AssetTags: 
+    ActiveRuleName: EnableGroup
+    Collectors:
+    - CollectPath: Assets/Res/FGUI
+      CollectorType: 0
+      AddressRuleName: AddressByFileName
+      PackRuleName: PackDirectory
+      FilterRuleName: CollectAll
+      AssetTags: 

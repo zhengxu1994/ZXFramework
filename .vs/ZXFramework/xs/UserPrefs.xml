@@ -1,29 +1,34 @@
 ﻿<Properties StartupConfiguration="{752CC507-48D8-CB41-305F-18D04BE4F8B0}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/HotFix/UILogic/SkillEditor.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/HotFix/HotFix.asmdef">
     <Files>
-      <File FileName="Assets/Scripts/HotFix/Animation/AnimatorTest.cs" Line="12" Column="1" />
-      <File FileName="Assets/Scripts/HotFix/Animation/FrameAnimator.cs" Line="114" Column="25" />
-      <File FileName="Assets/YooEditor/AssetBundleDebugger/RemotePlayerSession.cs" />
-      <File FileName="Assets/Scripts/Model/ResMgr/ResUpdateManager.cs" Line="28" Column="1" />
-      <File FileName="Assets/Scripts/Model/YooAsset/Runtime/YooAssets.cs" Line="1052" Column="1" />
-      <File FileName="Assets/Examples/Extension/ExtensionMain.cs" Line="4" Column="14" />
-      <File FileName="Assets/Scripts/Model/UI/ExtensionMgr.cs" Line="8" Column="11" />
-      <File FileName="Assets/Scripts/HotFix/UILogic/SkillEditor.cs" Line="5" Column="18" />
+      <File FileName="Assets/Scripts/HotFix/UILogic/SkillEditor/SkillEditor.cs" Line="9" Column="9" />
+      <File FileName="Assets/Scripts/HotFix/UILogic/SkillEditor/SkillEditorMgr.cs" />
+      <File FileName="Assets/Scripts/HotFix/UILogic_Export/SkillEditor/Gen_SkillEditor.cs" />
+      <File FileName="Assets/Scripts/Model/Main/MainUpdate.cs" />
+      <File FileName="Assets/Scripts/Model/Main/Main.cs" />
+      <File FileName="hybridclr_unity-main/Editor/Installer/BashUtil.cs" />
+      <File FileName="hybridclr_unity-main/Editor/Template/FileRegionReplace.cs" />
+      <File FileName="hybridclr_unity-main/Editor/Il2CppDef/Il2CppDefGenerator.cs" />
+      <File FileName="Assets/Scripts/HotFix/HotFix.asmdef" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ZXFramework" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="Examples" expanded="True">
-                <Node name="Extension" expanded="True" />
-              </Node>
-              <Node name="Res" expanded="True" />
               <Node name="Scripts" expanded="True">
                 <Node name="HotFix" expanded="True">
                   <Node name="UILogic" expanded="True">
-                    <Node name="SkillEditor.cs" selected="True" />
+                    <Node name="SkillEditor" expanded="True">
+                      <Node name="SkillEditor.cs" selected="True" />
+                    </Node>
                   </Node>
+                  <Node name="UILogic_Export" expanded="True">
+                    <Node name="SkillEditor" expanded="True" />
+                  </Node>
+                </Node>
+                <Node name="Model" expanded="True">
+                  <Node name="Main" expanded="True" />
                 </Node>
               </Node>
             </Node>
@@ -33,10 +38,12 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.AmplifyShaderEditor PreferredExecutionTarget="5961b323-2a6a-4ff7-89a0-65831a042292" />
+  <MonoDevelop.Ide.ItemProperties.AmplifyShaderEditor PreferredExecutionTarget="6d5fc45d-f295-478d-8d68-d5c63112e51e" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/zhengzhengxu/Desktop/ZXFramework/Assets/Scripts/Model/YooAsset/Runtime/YooAssets.cs" relfile="Assets/Scripts/Model/YooAsset/Runtime/YooAssets.cs" line="1052" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

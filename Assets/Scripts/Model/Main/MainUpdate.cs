@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,6 +21,8 @@ public class MainUpdate
     private float nextFrameTime = 0;
 
     private bool isLogicStart = false;
+
+    private Action hotFixUpdate = null;
     /// <summary>
     /// 初始化游戏逻辑帧率等信息
     /// </summary>
@@ -59,10 +62,15 @@ public class MainUpdate
         }
     }
 
+    public void SetHotfixUpdate(Action update)
+    {
+        hotFixUpdate = update;
+    }
+
     //游戏逻辑帧放在这里计算
     private void Update()
     {
-
+        hotFixUpdate?.Invoke();
     }
 
     private void FixedUpdate()

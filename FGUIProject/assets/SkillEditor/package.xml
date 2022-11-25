@@ -22,5 +22,5 @@
     <component id="a23ik" name="FrameSilder_grip.xml" path="/Com/"/>
     <component id="a23il" name="FrameSilder.xml" path="/Com/"/>
   </resources>
-  <publish name="" genCode="true"/>
+  <publish name="" genCode="true" extractAlpha="true"/>
 </packageDescription>

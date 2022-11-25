@@ -1,0 +1,21 @@
+ManifestFileVersion: 0
+CRC: 3488637204
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 8eaac1e68f715179139a82bc639fe068
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: e7a8211d1220a65f149cab164f436878
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 49
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Res/FGUI/SkillEditor_atlas0.png
+- Assets/Res/FGUI/SkillEditor_atlas0!a.png
+- Assets/Res/FGUI/SkillEditor_fui.bytes
+Dependencies: []

@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 3701486897
+CRC: 2500709926
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -11,4 +11,7 @@ AssetBundleManifest:
         Dependency_0: assets/res/prefab.bundle
     Info_2:
       Name: assets/res/spriteres.bundle
+      Dependencies: {}
+    Info_3:
+      Name: assets/res/fgui.bundle
       Dependencies: {}

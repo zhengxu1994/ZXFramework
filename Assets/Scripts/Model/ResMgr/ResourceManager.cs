@@ -143,7 +143,7 @@ namespace Resource
             base.Dispose();
         }
 
-        private const string _uiUrl = "Assets/Fgui/";
+        private const string _uiUrl = "FGUI/";
         //load uipackage
         public UIPackage LoadFairyGuiPackage(string pkgName)
         {
@@ -154,9 +154,16 @@ namespace Resource
                     string resFile = name.Replace(_uiUrl, "") + extension;
                     destroyMethod = DestroyMethod.Unload;
                     //TODO:
-                    return null;
+                    //string prefix = "FGUI";
+                    string location = name + extension;
+                    return LoadGUIAasset(pkgName, location, type);
                     }
             );
+        }
+
+        public Object LoadGUIAasset(string pkg,string path,Type type)
+        {
+            return LoadAsset(path, type);
         }
 
         public void ReleaseRes(string path,AssetType assetType = AssetType.Default)
