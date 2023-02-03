@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root Version="1.0">
+  <Common AutoAddressable="False" AutoCollectShader="True" ShaderBundleName="myshaders" />
+  <Group GroupName="Prefab" GroupDesc="预设体" AssetTags="">
+    <Collector CollectPath="Assets/Res/Prefab" CollectType="MainAssetCollector" AddressRule="AddressByFileName" PackRule="PackDirectory" FilterRule="CollectPrefab" AssetTags="" />
+  </Group>
+  <Group GroupName="Scenes" GroupDesc="场景" AssetTags="">
+    <Collector CollectPath="Assets/Res/Scene" CollectType="MainAssetCollector" AddressRule="AddressByFileName" PackRule="PackDirectory" FilterRule="CollectScene" AssetTags="" />
+  </Group>
+  <Group GroupName="SpriteSheet" GroupDesc="动作帧动画" AssetTags="">
+    <Collector CollectPath="Assets/Res/SpriteRes" CollectType="MainAssetCollector" AddressRule="AddressByFileName" PackRule="PackDirectory" FilterRule="CollectSprite" AssetTags="" />
+  </Group>
+  <Group GroupName="FGUI" GroupDesc="ui资源包" AssetTags="">
+    <Collector CollectPath="Assets/Res/FGUI" CollectType="MainAssetCollector" AddressRule="AddressByFileName" PackRule="PackDirectory" FilterRule="CollectAll" AssetTags="" />
+  </Group>
+</root>

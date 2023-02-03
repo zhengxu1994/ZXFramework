@@ -16,7 +16,7 @@ namespace Bepop.Core.UI
         {
             if (!type.IsSubclassOf(typeof(ViewBase)))
             {
-                Log.UI.LogError("Super Type Error :{0} must be extend ExtensionBase", type.ToString());
+                Log.UI.LogError("Super Type Error :{0} must be extend ViewBase", type.ToString());
                 return null;
             }
             ViewBase view = null;

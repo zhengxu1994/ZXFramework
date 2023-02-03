@@ -1,6 +1,6 @@
 {
-  "path": "/Users/zhengzhengxu/Desktop/ZXFramework/Assets/Res/FGUI",
-  "branchPath": "/Users/zhengzhengxu/Desktop/ZXFramework/Assets/Res/FGUI",
+  "path": "D:\\Works\\ZXFramework\\Assets\\Res\\FGUI",
+  "branchPath": "D:\\Works\\ZXFramework\\Assets\\Res\\FGUI",
   "fileExtension": "bytes",
   "packageCount": 2,
   "compressDesc": true,
@@ -9,7 +9,7 @@
   "compressPNG": false,
   "codeGeneration": {
     "allowGenCode": true,
-    "codePath": "/Users/zhengzhengxu/Desktop/ZXFramework/Assets/Scripts/HotFix/UILogic_Export",
+    "codePath": "D:\\Works\\ZXFramework\\Assets\\Scripts\\HotFix\\UILogic_Export",
     "classNamePrefix": "",
     "memberNamePrefix": "",
     "packageName": "Bepop.Core.UI",

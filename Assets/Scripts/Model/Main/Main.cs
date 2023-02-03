@@ -11,8 +11,8 @@ public class Main : MonoBehaviour
     {
         mainUpdate = new MainUpdate();
         mainUpdate.Start();
-
-     
+        
+        
         ////Test
         ////RedDotMgr.Inst.InitRedDotTreeNode();
         //UnityEngine.Profiling.Profiler.BeginSample("===============1");

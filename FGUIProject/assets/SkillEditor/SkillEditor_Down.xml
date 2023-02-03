@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="800,600">
+  <displayList>
+    <text id="n0_jilv" name="txt_name" xy="363,312" size="25,19" fontSize="12" text="123"/>
+  </displayList>
+  <scriptData extension="true" toCS="true"/>
+</component>

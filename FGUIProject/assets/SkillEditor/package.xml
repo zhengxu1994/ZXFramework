@@ -21,6 +21,7 @@
     <image id="a23ij" name="btn_旅馆_暂停.png" path="/Res/"/>
     <component id="a23ik" name="FrameSilder_grip.xml" path="/Com/"/>
     <component id="a23il" name="FrameSilder.xml" path="/Com/"/>
+    <component id="jilvm" name="SkillEditor_Down.xml" path="/" exported="true"/>
   </resources>
   <publish name="" genCode="true" extractAlpha="true"/>
 </packageDescription>

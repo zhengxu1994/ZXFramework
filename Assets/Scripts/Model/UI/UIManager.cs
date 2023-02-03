@@ -105,7 +105,7 @@ namespace Bepop.Core.UI
                 return;
             }
             if(addToIndex != -1)
-            _uiLayers[index].AddChildAt(child, addToIndex);
+                _uiLayers[index].AddChildAt(child, addToIndex);
             else
                 _uiLayers[index].AddChild(child);
         }
@@ -184,9 +184,10 @@ namespace Bepop.Core.UI
             string openSound = config.OpenSound;
             panel.Layer = layer;
 
+            //根节点ui创建 那么其他节点下（包含节点）都应该删除
             if(isRoot)
                 RemoveAll(true);
-
+            //隐藏后面的ui
             if (isHideBlow)
                 HideAll();
 
@@ -194,9 +195,10 @@ namespace Bepop.Core.UI
                 SetFullScreen(panel);
             else
                 SetPivotCenter(panel);
-
+            //显示top数据 一般包含 战力 金钱 等玩家数据
             SetTopInfo(config);
 
+            //模态背景创建
             if (hasModal)
             {
                 var graph = panel.CreateModal();
@@ -291,6 +293,7 @@ namespace Bepop.Core.UI
                     _loadedPkg[config.Package].AddReferenceCount();
 
                 var com = UIPackage.CreateObject(config.Package, config.Resource).asCom;
+                //是否需要自动合批功能
                 com.fairyBatching = config.IsBatching;
                 panel = (PanelBase)PanelBase.Create(type, com, uiName);
                 if (panel != null)
