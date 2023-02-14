@@ -15,7 +15,9 @@ namespace MyAi
         FormationMove,
         Attack,
         GroupReach,
-        LineUp
+        LineUp,
+        WaitForFriend,
+        CloseToTarget
     }
     public class MoveGroup  : UnitEntity
     {
@@ -27,6 +29,8 @@ namespace MyAi
         public Dictionary<int, MoveUnit> moveUnits;
 
         public FP NormalMoveSpeed = 0.2f;
+
+        public GroupState state { get; private set; }
 
         public override FP Speed
         {
@@ -45,7 +49,7 @@ namespace MyAi
             if (agentSid >= 0)
                 RVO.Simulator.Instance.delAgent(agentSid);
             agentSid = RVO.Simulator.Instance.addAgent(postion);
-            groupId = this.groupId;
+            this.groupId = groupId;
             Simulator.Instance.setAgentPrefVelocity(agentSid, new TSVector2(0,0));
             this.obj = GameObject.Instantiate(groupArea);
             this.obj.transform.position = postion.ToVector();
@@ -59,70 +63,171 @@ namespace MyAi
             int uid = groupId * 100;
             for (int i = 0; i < unitNum; i++)
             {
-                int unitUid = uid + i;
-                var unit = new MoveUnit(unitUid, groupId >= 0 ? 1 : 0, this, prefab);
+                int unitUid = groupId > 0 ? uid + i : uid - i;
+                var unit = new MoveUnit(unitUid , groupId >= 0 ? 1 : 0, this, prefab);
                 moveUnits.Add(i, unit);
             }
         }
-        public void AttachTarget(MoveGroup group)
+
+        private int waitingTick;
+
+        static int[] perturbNums = { 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61 };
+        static int perturbIdx = 0;
+
+        static int perturb
         {
-            if(group != null)
+            get
             {
-                UpdateStep();
+                var val = perturbNums[perturbIdx++];
+                if (perturbIdx >= perturbNums.Length)
+                    perturbIdx = 0;
+                return val;
             }
         }
-
         public void UpdateStep()
         {
             if (targetPos == MoveManager.MoveInvaild)
             {
                 Speed = 0;
+                state = GroupState.Stand;
             }
-            else if(agentSid >= 0 && moveEnable)
+            else if(agentSid >= 0 && moveEnable && state != GroupState.Attack)
             {
                 if (Speed <= 0) Speed = NormalMoveSpeed;
                 var playerPos = RVO.Simulator.Instance.getAgentPosition(agentSid);
-                var playerVel = RVO.Simulator.Instance.getAgentPrefVelocity(agentSid);
                 Position = playerPos;
                 obj.transform.position = playerPos.ToVector();
-                   
-                
-                var goalVector = targetPos - RVO.Simulator.Instance.getAgentPosition(agentSid);
+      
+                var goalVector = targetPos - playerPos;
 
-                if(RVOMath.absSq(goalVector) > 1.0f)
-                {
-                    goalVector = RVOMath.normalize(goalVector);
-                }
-                //移动方向
-                Simulator.Instance.setAgentPrefVelocity(agentSid, goalVector);
-
+                goalVector = RVO.RVOMath.normalize(goalVector) * 0.2f;
                 /* Perturb a little to avoid deadlocks due to perfect symmetry. */
                 /* 因为完美对称，所以需要加入些许抖动用来避免死锁
                  * 这里的完美对称，测试出是指两个完全一样的单位，不抖动=中心点一样=无法把其他排斥出去
                  */
-                float angle = (float)m_random.NextDouble() * 2.0f * (float)Math.PI;
-                float dist = (float)m_random.NextDouble() * 0.0001f;
-
-                Simulator.Instance.setAgentPrefVelocity(agentSid, Simulator.Instance.getAgentPrefVelocity(agentSid) +
-                                                    dist *
-                                                    new TSVector2((float)Math.Cos(angle), (float)Math.Sin(angle)));
+                FP angle = perturb * 2.0f * TSMath.Pi;
+                FP dist = perturb * 0.0001f;
+                goalVector += dist * new TSVector2(TSMath.Cos(angle), TSMath.Sin(angle));
+                //rvo前进
+                RVO.Simulator.Instance.setAgentPrefVelocity(agentSid, goalVector); ;
             }
 
             if(moveUnits!= null && moveUnits.Count > 0)
             {
                 moveUnits.ForEach((index, unit) => {
                     unit.UpdateStep();
+                    unit.moveParty.UpdateStep();
+                });
+            }
+        }
+
+        private FP closeToTargetRadiusSquared = 16f;
+       
+        private FP closeToTargetSpeed = 0.1f;
+
+        private FP freeAttackRadiusSquared = 2f;
+        public void UpdateState()
+        {
+            //更新group状态
+            //var dis = TSVector2.DistanceSquared(Position, targetPos);
+            //if(targetGroup == null)
+            //{
+            //    //无目标的情况下 无需减速处理
+            //    if(dis <= 0.05f)
+            //    {
+            //        //到达目的地
+            //        state = GroupState.Stand;
+            //        if (Speed != 0)
+            //        {
+            //            Speed = 0;
+            //            isMoving = false;
+            //        }
+
+            //        if (moveUnits != null && moveUnits.Count > 0)
+            //        {
+            //            moveUnits.ForEach((index, unit) => {
+            //                unit.StopMove(StopCause.GroupReached, MoveState.Stand);
+            //            });
+            //        }
+            //    }
+            //    else
+            //    {
+            //        state = GroupState.FormationMove;
+            //        if (Speed != NormalMoveSpeed)
+            //        {
+            //            Speed = NormalMoveSpeed;
+            //            isMoving = true;
+            //        }
+            //    }
+            //}
+            //else
+            //{
+            //    if (dis > closeToTargetRadiusSquared)
+            //    {
+            //        state = GroupState.FormationMove;
+            //        if (Speed != NormalMoveSpeed)
+            //            Speed = NormalMoveSpeed;
+            //    }
+            //    else if (dis <= closeToTargetRadiusSquared && dis > freeAttackRadiusSquared)
+            //    {
+            //        state = GroupState.CloseToTarget;
+            //        if (Speed != closeToTargetSpeed)
+            //            Speed = closeToTargetSpeed;
+            //    }
+            //    else if (dis <= freeAttackRadiusSquared)
+            //    {
+            //        //到达目的地
+            //        state = GroupState.Attack;
+            //        if (Speed != 0)
+            //        {
+            //            Speed = 0;
+            //            isMoving = false;
+            //        }
+
+            //        moveUnits.ForEach((index, unit) => {
+            //            unit.StopMove(StopCause.GroupAttack, MoveState.CloseToTarget);
+            //        });
+            //    }
+            //}
+            
+
+            if (moveUnits != null && moveUnits.Count > 0)
+            {
+                moveUnits.ForEach((index, unit) =>
+                {
+                    unit.UpdateState();
                 });
             }
         }
 
         public TSVector2 targetPos = MoveManager.MoveInvaild;
         public TSVector2 goal;
-
+        public MoveGroup targetGroup = null;
         public GroupState groupState;
+
+        private void CheckWaitForFriend()
+        {
+            //判断是否因为其他队伍阻挡 进入等待
+            if (RVO.Simulator.Instance.getAgentMaxSpeed(agentSid) > 0)
+            {
+                var velocity = RVO.Simulator.Instance.getAgentVelocity(agentSid);
+                if (RVO.RVOMath.absSq(velocity) < 1f)
+                {
+                    waitingTick = 30;
+                    RVO.Simulator.Instance.setAgentMaxSpeed(agentSid, 0);
+
+                    foreach (var unit in moveUnits.Values)
+                        unit.StopMove(StopCause.WaitForFriend, MoveState.Stand);
+                    RVO.Simulator.Instance.setAgentPosition(agentSid, Position);
+                    return;
+                }
+            }
+        }
         public void MoveToPosition(TSVector2 targetPos,bool isManual)
         {
             this.targetPos = targetPos;
+            state = GroupState.FormationMove;
+            isMoving = true;
             Log.BASE.LogInfo("MoveToPosition" + targetPos);
             if(moveUnits != null && moveUnits.Count > 0)
             {
@@ -131,5 +236,23 @@ namespace MyAi
                 });
             }
         }
+
+        public void AttachTarget(MoveGroup group,bool isManual)
+        { 
+            if(group != null)
+            {
+                targetGroup = group;
+                targetPos = group.Position;
+                state = GroupState.FormationMove;
+                isMoving = true;
+                if (moveUnits != null && moveUnits.Count > 0)
+                {
+                    moveUnits.ForEach((index, unit) => {
+                        unit.MoveToPosition(targetPos, isManual);
+                    });
+                }
+            }
+        }
+
     }
 }

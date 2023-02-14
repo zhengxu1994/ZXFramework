@@ -41,9 +41,20 @@ public class AStarDemo : MonoBehaviour
 
     public GameObject playerPrefab;
 
-    public MoveGroup player, enemy;
+
+    public List<MoveGroup> players = new List<MoveGroup>();
+
+    public List<MoveGroup> enemies = new List<MoveGroup>();
 
     public FP groupRadius = 1.5f;
+
+    public (FP, FP)[] playerPos = new (FP, FP)[] {
+    (2.7,1.1),(2.7f,2.3),(3.9,3.2),(3.4,4.6),(3.1,7)
+    };
+
+    public (FP, FP)[] enemiesPos = new (FP, FP)[] {
+    (15,2.3),(15,4.3),(14,6.4),(15.2,8.1),(17.3,8.4)
+    };
 
     public GameObject groupArea;
     private void Start()
@@ -56,19 +67,40 @@ public class AStarDemo : MonoBehaviour
         MoveManager.Instance.width = width;
         MoveManager.Instance.height = height;
         AStarManager.Instance.Init(width,height,blockIndex);
-        player = new MoveGroup(1, 0.5f, new TrueSync.TSVector2(3.5, 2), playerPrefab, groupArea);
-        enemy = new MoveGroup(-1, 0.5f, new TrueSync.TSVector2(14, 7), playerPrefab, groupArea);
-        enemy.moveEnable = false;
+        for (int i = 1; i <= 5; i++)
+        {
+            int id = i;
+            if (id != 4) continue;
+           var player = new MoveGroup(id, 0.5f, new TrueSync.TSVector2(playerPos[id - 1].Item1, playerPos[id - 1].Item2), playerPrefab, groupArea);
+            players.Add(player);
+        }
+
+        for (int i = 1; i <= 5; i++)
+        {
+            int id = i;
+            if (id != 3) continue;
+            var enemy = new MoveGroup(-id, 0.5f, new TrueSync.TSVector2(enemiesPos[id-1].Item1, enemiesPos[id-1].Item2), playerPrefab, groupArea);
+            enemies.Add(enemy);
+        }
+
+        players[0].targetPos = enemies[0].Position;
+        //enemy.moveEnable = false;
         //astar = new AStar();
         //astar.Init(width, height, blockIndex);
     }
 
     private void GoToTargetTest()
     {
-        player.UpdateStep();
-        enemy.UpdateStep();
-        //player.UpdateStep(enemy);
-        //enemy.UpdateStep(player);
+        players.ForEach((unit) => {
+            unit.UpdateState();
+            unit.UpdateStep();
+        });
+
+        enemies.ForEach((unit) => {
+            unit.UpdateState();
+            unit.UpdateStep();
+        });
+
     }
 
     IEnumerator CreateMap()
@@ -95,12 +127,50 @@ public class AStarDemo : MonoBehaviour
         }
         yield return null;
     }
-
+    private int updateTime = 30;
+    private int nowTime = 30;
     private void Update()
     {
+        //nowTime++;
+        //if (nowTime >= updateTime)
+        //{
+        //    nowTime = 0;
+        //    players.ForEach((unit) => {
+        //        FP dis = FP.MaxValue;
+        //        MoveGroup chooseUnit = null;
+        //        for (int i = 0; i < enemies.Count; i++)
+        //        {
+        //            var tempDis = TSVector2.DistanceSquared(enemies[i].Position, unit.Position);
+        //            if (tempDis < dis)
+        //            {
+        //                dis = tempDis;
+        //                chooseUnit = enemies[i];
+        //            }
+        //        }
+        //        if (chooseUnit != null)
+        //            unit.AttachTarget(chooseUnit,false);
+        //    });
+
+        //    enemies.ForEach((unit) => {
+        //        FP dis = FP.MaxValue;
+        //        MoveGroup chooseUnit = null;
+        //        for (int i = 0; i < players.Count; i++)
+        //        {
+        //            var tempDis = TSVector2.DistanceSquared(players[i].Position, unit.Position);
+        //            if (tempDis < dis)
+        //            {
+        //                dis = tempDis;
+        //                chooseUnit = players[i];
+        //            }
+        //        }
+        //        if (chooseUnit != null)
+        //            unit.AttachTarget(chooseUnit, false);
+        //    });
+        //}
+
         if (Input.GetKeyDown(KeyCode.K))
         {
-            player.MoveToPosition(enemy.Position, true);
+            //player.MoveToPosition(enemy.Position, true);
         }
         if(Input.GetKeyDown(KeyCode.Space) && openAStar)
         {
@@ -116,6 +186,11 @@ public class AStarDemo : MonoBehaviour
             {
                 blockIndex.Add(index);
                 mapGrids[index.Item1, index.Item2].GetComponent<SpriteRenderer>().color = Color.red;
+            }
+            else
+            {
+                blockIndex.Remove(index);
+                mapGrids[index.Item1, index.Item2].GetComponent<SpriteRenderer>().color = Color.white;
             }
         }
 

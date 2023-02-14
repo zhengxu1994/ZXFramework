@@ -89,7 +89,7 @@ namespace KdTree.Math
 namespace KdTree
 {
     [Serializable]
-    public class TSVector2KdNode<TValue>
+    public class TSVector2KdNode<TValue>  
     {
         public TSVector2 Point;
         public TValue Value = default(TValue);
@@ -215,6 +215,9 @@ namespace KdTree
         public TSVector2KdTree(int dimensions, AddDuplicateBehavior addDuplicateBehaviour)
         {
             AddDuplicateBehavior = addDuplicateBehaviour;
+            this.dimensions = dimensions;
+            Count = 0;
+            TSVector2KdNodePool = new TObjectPool<TSVector2KdNode<TValue>>(OnAlloc, OnFree, OnDestroy);
         }
 
         private TSVector2KdNode<TValue> OnAlloc()

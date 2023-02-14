@@ -43,5 +43,9 @@ namespace MyAi
         public GameObject obj;
 
         public MoveParty moveParty;
+
+        private bool _isMoving;
+
+        public bool isMoving { get => _isMoving; set => _isMoving = value; }
     }
 }
