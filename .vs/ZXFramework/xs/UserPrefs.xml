@@ -1,15 +1,13 @@
 ﻿<Properties StartupConfiguration="{752CC507-48D8-CB41-305F-18D04BE4F8B0}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/HotFix/HotFix.asmdef">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Model/UILogic/UGUIExt/TabView.cs">
     <Files>
       <File FileName="Assets/Scripts/HotFix/UILogic/SkillEditor/SkillEditor.cs" Line="9" Column="9" />
       <File FileName="Assets/Scripts/HotFix/UILogic/SkillEditor/SkillEditorMgr.cs" />
       <File FileName="Assets/Scripts/HotFix/UILogic_Export/SkillEditor/Gen_SkillEditor.cs" />
       <File FileName="Assets/Scripts/Model/Main/MainUpdate.cs" />
       <File FileName="Assets/Scripts/Model/Main/Main.cs" />
-      <File FileName="hybridclr_unity-main/Editor/Installer/BashUtil.cs" />
-      <File FileName="hybridclr_unity-main/Editor/Template/FileRegionReplace.cs" />
-      <File FileName="hybridclr_unity-main/Editor/Il2CppDef/Il2CppDefGenerator.cs" />
       <File FileName="Assets/Scripts/HotFix/HotFix.asmdef" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Model/UILogic/UGUIExt/TabView.cs" Line="4" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,9 +17,7 @@
               <Node name="Scripts" expanded="True">
                 <Node name="HotFix" expanded="True">
                   <Node name="UILogic" expanded="True">
-                    <Node name="SkillEditor" expanded="True">
-                      <Node name="SkillEditor.cs" selected="True" />
-                    </Node>
+                    <Node name="SkillEditor" expanded="True" />
                   </Node>
                   <Node name="UILogic_Export" expanded="True">
                     <Node name="SkillEditor" expanded="True" />
@@ -29,6 +25,11 @@
                 </Node>
                 <Node name="Model" expanded="True">
                   <Node name="Main" expanded="True" />
+                  <Node name="UILogic" expanded="True">
+                    <Node name="UGUIExt" expanded="True">
+                      <Node name="TabView.cs" selected="True" />
+                    </Node>
+                  </Node>
                 </Node>
               </Node>
             </Node>
@@ -38,7 +39,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.AmplifyShaderEditor PreferredExecutionTarget="6d5fc45d-f295-478d-8d68-d5c63112e51e" />
+  <MonoDevelop.Ide.ItemProperties.AmplifyShaderEditor PreferredExecutionTarget="3753ef50-1c42-4cc9-a03c-4effdb3c547d" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
