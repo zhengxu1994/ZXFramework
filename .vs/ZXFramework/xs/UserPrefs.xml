@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{752CC507-48D8-CB41-305F-18D04BE4F8B0}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Model/UILogic/UGUIExt/TabView.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Model/Animation/AnimationTest.cs">
     <Files>
       <File FileName="Assets/Scripts/HotFix/UILogic/SkillEditor/SkillEditor.cs" Line="9" Column="9" />
       <File FileName="Assets/Scripts/HotFix/UILogic/SkillEditor/SkillEditorMgr.cs" />
@@ -7,7 +7,9 @@
       <File FileName="Assets/Scripts/Model/Main/MainUpdate.cs" />
       <File FileName="Assets/Scripts/Model/Main/Main.cs" />
       <File FileName="Assets/Scripts/HotFix/HotFix.asmdef" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Model/UILogic/UGUIExt/TabView.cs" Line="4" Column="1" />
+      <File FileName="Assets/Scripts/Model/UILogic/UGUIExt/LoopList.cs" Line="83" Column="66" />
+      <File FileName="Assets/Scripts/Model/UILogic/UGUIExt/NewMonoBehaviour.cs" Line="19" Column="14" />
+      <File FileName="Assets/Scripts/Model/Animation/AnimationTest.cs" Line="18" Column="22" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -24,11 +26,12 @@
                   </Node>
                 </Node>
                 <Node name="Model" expanded="True">
+                  <Node name="Animation" expanded="True">
+                    <Node name="AnimationTest.cs" selected="True" />
+                  </Node>
                   <Node name="Main" expanded="True" />
                   <Node name="UILogic" expanded="True">
-                    <Node name="UGUIExt" expanded="True">
-                      <Node name="TabView.cs" selected="True" />
-                    </Node>
+                    <Node name="UGUIExt" expanded="True" />
                   </Node>
                 </Node>
               </Node>

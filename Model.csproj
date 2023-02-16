@@ -633,7 +633,9 @@
     <Compile Include="Assets/Scripts/Model/Tool/TrueSync/TrueSync/Unity/TSPolygonCollider2D.cs" />
     <Compile Include="Assets/Scripts/Model/Tool/TrueSync/TrueSync/Physics/Farseer/Dynamics/World.cs" />
     <Compile Include="Assets/Scripts/Model/Tool/TrueSync/Plugins/TrueSyncDll/TrueSync/IBody.cs" />
-    <Compile Include="Assets/Scripts/Model/UILogic/UGUIExt/TabView.cs" />
+    <Compile Include="Assets/Scripts/Model/UILogic/UGUIExt/LoopList.cs" />
+    <Compile Include="Assets/Scripts/Model/UILogic/UGUIExt/LoopListItem.cs" />
+    <Compile Include="Assets/Scripts/Model/Animation/AnimationTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Scripts/Model/Movement/RVO2/CMakeLists.txt" />
