@@ -192,4 +192,178 @@ Mapping 设置骨骼信息 ，Muscies&setting 设置肌肉拉伸等信息。
     * animator.Update(0f); //force transition completion, your object should now be in default pose
     * go.SetActive(false); //disabled in default pose
     ```
+  
+  **Animator Transition** 动画过渡
+  
+  ![image-20230216190242910](/Users/zhengzhengxu/Desktop/ZXFramework/Assets/LearnNodes/Unity Animator.assets/image-20230216190242910.png)![image-20230216190326864](/Users/zhengzhengxu/Desktop/ZXFramework/Assets/LearnNodes/Unity Animator.assets/image-20230216190326864.png)![image-20230216190444892](/Users/zhengzhengxu/Desktop/ZXFramework/Assets/LearnNodes/Unity Animator.assets/image-20230216190444892.png)
+  
+  这里的Transitions可以有多个，多个Transition执行的优先级为：solo-->条件先达到--->Transitions中的排序先后 第一个执行。
+  
+  **勾选了Mute的转换永远不会被执行**。
+  
+  面板参数：
+  
+  - Has Exit Time 默认被勾选 当前动画状态播放到一个时间点时才会执行这个转换，不勾选那么动画会立即跳转。
+  - exit time 动画开始转换的时间 比例值 
+  - fixed during 转换的持续时间是用秒还是用当前动画状态的百分比
+  - transtion offset 进入下一个动画的偏移量 0代表从下一个状态的开始进行播放 0.5代表从下一个状态的中间点进行播放 
+  - interruption source 有哪些转换可以打断当前这个转换
+  
+  **Conditions 过渡条件**
+  
+  过渡条件有四个类型是从上面的parameters中获取
+  
+  通过animation.SetFloat("name","value") 等等方法
+  
+  **Interruption Source 动画状态过渡中断/转换打断**
+  
+  *ordered interruption 是否按照过渡的顺序执行，如果a可以到b c d ，那么只有顺序中的第一位可以被执行 a-c ，a-d就无法执行，可以手动调整顺序来控制*
+  
+  下面的条件是已a为current state处理
+  
+  - current state 当a-b时 可以被a-c状态打断 直接过去到c
+  - next state a - b的转换可以由全部从b出发的转换打断，比如b-c b-d  注意是全部 但是当转换条件都满足时 b-c b-d还是根据执行顺序来判断优先执行
+  - current state than next state ,无论是从a出发 还是 b出发的转换都可以打断转换，但是a出发的优先级高于b
+  - next state than current state 无论是从a出发 还是 b出发的转换都可以打断转换，但是b出发的优先级高于c
+
+### Bleed Tree的使用
+
+右键状态机空白部分，Create State - From New Bleed Tree,双击打开bleed tree 设置面板。
+
+![image-20230217134639612](/Users/zhengzhengxu/Desktop/ZXFramework/Assets/LearnNodes/Unity Animator.assets/image-20230217134639612.png)![image-20230217134712953](/Users/zhengzhengxu/Desktop/ZXFramework/Assets/LearnNodes/Unity Animator.assets/image-20230217134712953.png)![image-20230217144039813](/Users/zhengzhengxu/Desktop/ZXFramework/Assets/LearnNodes/Unity Animator.assets/image-20230217144039813.png)![image-20230217134735165](/Users/zhengzhengxu/Desktop/ZXFramework/Assets/LearnNodes/Unity Animator.assets/image-20230217134735165.png)
+
+可以给bleed tree 添加motion状态。
+
+**BleedType**
+
+- 1D 只有一个变量控制转换
+- 2D Simple Directional
+- 2D Freeform Directional
+- 2D Freeform Cartesian
+- Direct
+
+**Automate Thresholds 是否自动设置动画权重**
+
+### Apply  Root Motion
+
+apply root motion 开启与未开启的区别：
+
+- 未开启 每帧会根据动画配置中的数据去读取对应的位置以及旋转 并做差值运算赋值，所以当动画回到第一帧时对象的状态也会回到第一帧
+- 开启后 unity会通过动画文件里记录的绝对坐标和绝对方向以及当前游戏对象的缩放比例计算出游戏对象在上一帧的相对位移和相对转角，然后在根据相对位移相对转角来操作对象。
+- 总结：**动画位移会直接修改每一帧里游戏对象的坐标值和角度，而root motion则通过相对位移和转角来移动游戏对象。比如初始位置（0，0）一共10帧， 每次位移（1，1）。 未开启在回到0帧时会回到（0，0），而开启后会在（10，10）的位置继续前进**
+
+**Apply Root motion的控制可以通过代码去操作**
+
+![image-20230217151721186](/Users/zhengzhengxu/Desktop/ZXFramework/Assets/LearnNodes/Unity Animator.assets/image-20230217151721186.png)
+
+```c#
+    public void OnAnimatorMove()
+    {
+        transform.position += animator.deltaPosition;//一样能达到开启后位移的效果
+    }
+```
+
+
+
+### Generic 类型的模型也可以创建自定的avatar骨骼并运动root motion
+
+#### Des: Root Motion在Generic 动画中指的就是将角色的根骨骼的运动应用到游戏对象上。
+
+
+
+### Tip:在使用apply root motion 去控制带有位移动画的游戏对象时可能出现一种情况，那就是对象在动画最后一帧时又卡回到了远点，导致这个结果的原因是在这个动画设置中勾选了Bake Into Pose 看下图，不勾选就解决了这个问题，核心思路就是我想让游戏对象受动画的控制。
+
+![image-20230217163805048](/Users/zhengzhengxu/Desktop/ZXFramework/Assets/LearnNodes/Unity Animator.assets/image-20230217163805048.png)
+
+-  Bake into Pose ，是否需要动画来驱动游戏对象旋转 ， 移动 xz y。
+- Based Upon 游戏对象在动画开始时对准根骨骼节点的指向方向，开启代表不需要
+- Offset 当方向不准确可以调整offset来修改
+
+#### Humhanoid 下 Root Motion的使用
+
+**Des:Generic模式下Root motion是通过把动画文件描述中的根骨骼坐标值和角度值转换为相对应的位移和相对转角，并以此来移动对象，而Humhanoid由于使用avatar系统动画文件不在包含具体的骨骼描述，自然无法通过指定根骨骼来解决这个问题，unity通过分析humhanoid动画中的骨骼结构计算出模型的重心center of mass如下图1可以看到人物的重心,也可以通过代码去访问到重心坐标和方向，最终将这个重心的位置当作根骨骼的节点来对待。**
+
+![image-20230218133053311](/Users/zhengzhengxu/Desktop/ZXFramework/Assets/LearnNodes/Unity Animator.assets/image-20230218133053311.png)
+
+```c#
+var pos = animator.bodyPosition;
+var rotation = animator.bodyRotation;
+```
+
+#### 在Bleed Tree 下使用root motion
+
+![image-20230218134337839](/Users/zhengzhengxu/Desktop/ZXFramework/Assets/LearnNodes/Unity Animator.assets/image-20230218134337839.png)![image-20230218134720194](/Users/zhengzhengxu/Desktop/ZXFramework/Assets/LearnNodes/Unity Animator.assets/image-20230218134720194.png)
+
+compute thresholds:计算阈值的方式
+
+- Speed 取root motion的绝对值
+- Velocity X. Root motion x上的速度
+- Velocity Y root motion y
+- Velocity Z root motion z
+- Angular Speed(rad) root mition的旋转速度 弧度每秒
+- Angular Speed(Deg)。角度每秒
+
+当我选择Velocity Z 时可以看到计算出来的阈值，那么将速度设置到这个值时理论上root motion就会已对应的速度前进和后退。
+
+adjust time scale 计算让所有方向上的速度一致
+
+homegeneous speed 自动计算。
+
+#### 不同角色使用同一个avatar下的root motion 速度不一致问题解决方案：
+
+导致不同的速度的根本原因是不同的模型在unity humanoid中的scale是不一样的，可以通过animator.humanSacle获取。
+
+可以通过让动画播放的速度 = 播放速度 / humanscale 就可以让不同的模型保持同样的速度，但是我又不想让我的所有动画速度都改变那么可以通过动画状态设置面板中的Multiplier 属性去修改即可，开启选项并通过代码animator.SetFloat("name",speed/humanScale);
+
+.![image-20230219131337436](/Users/zhengzhengxu/Desktop/ZXFramework/Assets/LearnNodes/Unity Animator.assets/image-20230219131337436.png)
+
+#### 自定义控制人物动画移动速度
+
+- 给人物添加rigdbody，锁定x 和z轴转动防止人物移动出错，调整collider 大小，注意通过要设置animator的update mode为animator physic  物理同步 因为使用到了ridybody。
+- 添加脚本，复写OnAnimatorMove方法将ridibody的velocity设置为root motion的velocity
+- 这里会遇到一个问题 人物的重力好像没有作用，是因为动画配置中的bake into pose没有勾选上，勾选上后就会让动画位移旋转不作用到对象上，这样就可以由重力控制。
+- 通过又遇到一个问题 在复写了OnAnimatorMove方法后人物的下落速度很慢，原因是人物的重力加速是如每帧0.02秒 重力是9.8，那么每帧的加速是0.125，但是我们在方法内通过设置velocity的方法把下落速度设置为0了，解决方法就是我们只读取root motion的xz值y值使用ridybody的值即可。
+
+
+
+![image-20230219134138790](/Users/zhengzhengxu/Desktop/ZXFramework/Assets/LearnNodes/Unity Animator.assets/image-20230219134138790.png)
+
+### 角色控制器
+
+为角色添加animator rigdbody collider ，通过input 传入的值去控制角色的移动和转向,可以通过添加cinemachine控制角色相机。
+
+```c#
+playerMovement.x = inputVector.x;
+playerMovement.y = inputVector.z;
+
+Quaternion targetQ = Quaternion.LookRotation(playerMovement,Vector.Up);
+transform.rotation = Quaternion.RotateTowards(transform.rotation,targetRotaion,0.5f);
+```
+
+####  角色动画分层
+
+![image-20230220153756277](/Users/zhengzhengxu/Desktop/ZXFramework/Assets/LearnNodes/Unity Animator.assets/image-20230220153756277.png)![image-20230220154203594](/Users/zhengzhengxu/Desktop/ZXFramework/Assets/LearnNodes/Unity Animator.assets/image-20230220154203594.png)
+
+比如可以控制手臂和身体播放两种动画，
+
+- Weight 权重 0代表不起作用
+
+- Avatar mask 骨骼蒙版 让身体的哪些骨骼受这个层级的动画控制,可以在资源面板内创建mask对象。如上图 绿色的代表受控制 红色不受控制
+
+- blending 有两种 override 用当前层级的动画取代上面层级的动画 和 add 和上面的动画混合 比如可以处理人物疲劳效果
+
+- sync 同步选择与哪个层级保持一致  ，当a与b保持一致时当b的动画状机发生改变后a也会自动改变,注意保持的只是状态机状态和转换关系，具体状态的动画和bleed tree是不同步的。![image-20230220162746410](/Users/zhengzhengxu/Desktop/ZXFramework/Assets/LearnNodes/Unity Animator.assets/image-20230220162746410.png)![image-20230220162953998](/Users/zhengzhengxu/Desktop/ZXFramework/Assets/LearnNodes/Unity Animator.assets/image-20230220162953998.png)
+
+- ik pass 是否开启ik动画 
+
+  ```c#
+  //获取动画层级
+  var index = animator.GetLayerIndex("layer name");
+  //设置层级权重
+  animator.SetLayerWeight(index,num);
+  ```
+
+  
+
+#### 使用Animation Rigging 插件来控制ik动画
 

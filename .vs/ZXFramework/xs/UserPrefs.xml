@@ -6,43 +6,22 @@
       <File FileName="Assets/Scripts/HotFix/UILogic_Export/SkillEditor/Gen_SkillEditor.cs" />
       <File FileName="Assets/Scripts/Model/Main/MainUpdate.cs" />
       <File FileName="Assets/Scripts/Model/Main/Main.cs" />
-      <File FileName="Assets/Scripts/HotFix/HotFix.asmdef" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Model/UILogic/UGUIExt/LoopList.cs" Line="83" Column="66" />
-      <File FileName="Assets/Scripts/Model/UILogic/UGUIExt/NewMonoBehaviour.cs" Line="19" Column="14" />
-      <File FileName="Assets/Scripts/Model/Animation/AnimationTest.cs" Line="18" Column="22" />
+      <File FileName="Assets/Scripts/HotFix/HotFix.asmdef" />
+      <File FileName="Assets/Scripts/Model/UILogic/UGUIExt/LoopList.cs" />
+      <File FileName="Assets/Scripts/Model/Animation/AnimationTest.cs" Line="38" Column="6" />
+      <File FileName="Assets/Scripts/Model/Input/PlayerInputTest.cs" Line="4" Column="1" />
+      <File FileName="Assets/Scripts/Model/Animation/ApplyRootMotionTest.cs" Line="23" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ZXFramework" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Scripts" expanded="True">
-                <Node name="HotFix" expanded="True">
-                  <Node name="UILogic" expanded="True">
-                    <Node name="SkillEditor" expanded="True" />
-                  </Node>
-                  <Node name="UILogic_Export" expanded="True">
-                    <Node name="SkillEditor" expanded="True" />
-                  </Node>
-                </Node>
-                <Node name="Model" expanded="True">
-                  <Node name="Animation" expanded="True">
-                    <Node name="AnimationTest.cs" selected="True" />
-                  </Node>
-                  <Node name="Main" expanded="True" />
-                  <Node name="UILogic" expanded="True">
-                    <Node name="UGUIExt" expanded="True" />
-                  </Node>
-                </Node>
-              </Node>
-            </Node>
-          </Node>
+          <Node name="ZXFramework" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.AmplifyShaderEditor PreferredExecutionTarget="3753ef50-1c42-4cc9-a03c-4effdb3c547d" />
+  <MonoDevelop.Ide.ItemProperties.AmplifyShaderEditor PreferredExecutionTarget="aad7c6f3-3540-4287-8503-d192c8d64c5f" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>

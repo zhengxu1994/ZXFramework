@@ -16,20 +16,25 @@ public class AnimationTest : MonoBehaviour
     void Start()
     {
         animation = this.GetComponent<Animation>();
-        AnimationState state1 = null;
-        foreach (AnimationState state in animation)
-        {
-            Log.BASE.LogInfo(state.name);
-            Log.BASE.LogInfo(state.clip);
-            if (state1 == null)
-                state1 = state;
-        }
-        var clip = animation.GetClip("AnimationTest 1");
-        animation.Play("AnimationTest 1");
+        //AnimationState state1 = null;
+        //foreach (AnimationState state in animation)
+        //{
+        //    Log.BASE.LogInfo(state.name);
+        //    Log.BASE.LogInfo(state.clip);
+        //    if (state1 == null)
+        //        state1 = state;
+        //}
+        //var clip = animation.GetClip("AnimationTest 1");
+        //animation.Play("AnimationTest 1");
     }
 
     // Update is called once per frame
     void Update()
+    {
+        
+    }
+
+    public void OnAnimatorMove()
     {
         
     }
